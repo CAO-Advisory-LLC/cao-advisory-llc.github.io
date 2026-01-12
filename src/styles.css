@@ -1,0 +1,9 @@
+/* This is here purely for development, comment it out for release */
+* {
+	outline: 1px solid red;
+	margin: 0px;
+}
+
+body {
+	padding: 10px;
+}
