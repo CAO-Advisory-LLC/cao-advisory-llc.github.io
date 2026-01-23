@@ -1,6 +1,6 @@
 /* This is here purely for development, comment it out for release */
 * {
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 	margin: 0px;
 }
 
@@ -12,12 +12,13 @@ body {
     /* overflow-x: scroll;
     overflow-y: scroll;
     height: 100%; */
+    line-height: 1.2;
 }
 
 
 
 #business-msg {
-    background-color: #1F2937;
+    background-color: #2f3c4e;
     display: flex;
     justify-content: space-around;
     /* top, right, bottom, left */
@@ -36,7 +37,7 @@ body {
     color: #F9FAF8;
     font-size: 48px;
     font-weight: 900;
-    line-height: 1.2;
+    /* line-height: 1.2; */
     text-align: center;
 }
 #business-msg .container .subtext {
@@ -77,17 +78,20 @@ body {
 }
 #success-stories .stories {
     display: flex;
+    justify-content: space-between;
 }
 #success-stories .story {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 #success-stories img {
     border-radius: 10px;
-    border: 4px solid #3882F6;
+    border: 4px solid #7a7a7a;
     width: 200px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 #success-stories .subtext {
     color: #6a6a6a;
@@ -103,14 +107,43 @@ body {
 #methods {
     background-color: #E5E7EB;
     /* top, right, bottom, left */
-    padding: 75px 150px 75px 150px;
+    padding: 75px 50px 75px 50px;
+    color: #1F2937;
+}
+#methods .title {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 30px;
+}
+#methods .grid {
+    display: grid;
+    border: 1px solid black;
+    border-radius: 3px;
+    /* if you want to have different sized columns, then use the commented att */
+    /* grid-template-columns: 10fr 10fr 10fr 10fr 10fr 10fr 10fr; */
+    grid-template-columns: 2fr repeat(6, 10fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+#methods .cell {
+    padding: 6px;
+    display: grid;
+    border: 1px solid black;
+    font-size: 20px;
+}
+#methods .descript {
+    background-color: #d8dce1;
+}
+#methods .detail {
+    background-color: #e9edf4;
 }
 #methods .quote {
     color: #1F2937;
     font-size: 36px;
     font-weight: lighter;
     font-style: italic;
-    line-height: 1.2;
+    /* line-height: 1.2; */
     margin-bottom: 20px;
 }
 #methods .quoter {
