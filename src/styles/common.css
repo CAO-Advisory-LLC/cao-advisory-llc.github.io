@@ -1,18 +1,20 @@
 :root {
     /* theme colors by color name */
-    --dark-blue: #00458b;
-    --white: #ffffff;
+    --dark-blue: #003060;
+    --tan: #f9e672;
+
 
     /* theme colors by color function */
-    --dark-text: var(--dark-blue);
-    --light-bg: var(--white);
-    --light-text: var(--white);
-    --dark-bg: var(--dark-blue);
+    --header-color: white;
+    --header-txt-color: var(--dark-blue);
+
+    --footer-color: var(--dark-blue);
+    --footer-txt-color: white;
 }
 
 * {
     /* This is here purely for development, comment it out for release */
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 
 	margin: 0px;
 }

@@ -1,5 +1,7 @@
 #header {
-    background-color: var(--light-bg);
+    background-color: var(--header-color);
+    color: var(--header-txt-color);
+    font-family: 'Figtree', sans-serif;
 
     display: flex;
     justify-content: space-between;
@@ -10,7 +12,8 @@
     position: sticky;
     top: 0;
 
-    /* consider choosing a different font for header specifically */
+    /* horizontal-offset, vertical-offset, blur, spread, color */
+    box-shadow: 0 1px 10px -6px gray;
 }
 #header .logo {
     display: block;
@@ -29,7 +32,6 @@
     list-style: none;
 }
 #header .links a {
-    color: var(--dark-text);
     font-size: 18px;
 
     /* remove link underlines */
