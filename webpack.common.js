@@ -27,7 +27,7 @@ const populateHtmlPlugins = (pagesArray) => {
     })
     return res;
 }
-const pages = populateHtmlPlugins(["Resources", "About", "Contact"]);
+const pages = populateHtmlPlugins(["How", "About","Resources", "Contact"]);
 const header_footer = [
     new HtmlWebpackPlugin({
         // not sure what the function of this is
