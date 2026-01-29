@@ -1,5 +1,5 @@
 #business-msg {
-    background-color: #2f3c4e;
+    background-color: var(--sec1-bg-color);
     /* just to center the contents */
     display: flex;
     flex-direction: column;
@@ -10,24 +10,25 @@
     padding: 75px 200px 75px 200px;
 }
 #business-msg .title {
-    color: #F9FAF8;
+    color: var(--sec1-title-color);
     text-align: center;
 }
 #business-msg .subtext {
-    color: #E5E7EB;
+    color: var(--sec1-subtext-color);
     line-height: 1.4;
     text-align: center;
 }
 #business-msg button {
-    color: #F9FAF8;
-    background-color: #3882F6;
+    color: var(--sec1-btn-text-color);
+    background-color: var(--sec1-btn-color);
     /* round corners */
     border-radius: 10px;
     /* flexbox seems to mess with setting left and right padding, so have to set width */
     width: 200px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    /* border: 4px solid #3882F6; */
+
+    /* top, right, bottom, left */
+    padding: 6px 6px 6px 6px;
+
     border: none;
     font-size: 18px;
     font-weight: 500;
@@ -42,9 +43,11 @@
 
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
+
+    background-color: var(--sec2-bg-color);
 }
 #success-stories .header {
-    color: #1F2937;
+    color: var(--sec2-header-color);
     text-align: center;
 }
 #success-stories .stories {
@@ -55,17 +58,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid var(--sec2-story-border-color);
     border-radius: 20px;
 }
 #success-stories img {
     border-radius: 10px;
-    border: 4px solid #7a7a7a;
+    border: 4px solid var(--sec2-img-border-color);
     width: 200px;
     margin: 10px;
 }
 #success-stories .subtext {
-    color: #6a6a6a;
+    color: var(--sec2-subtext-color);
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -78,20 +81,18 @@
     flex-direction: column;
     gap: 30px;
 
-    background-color: #E5E7EB;
     /* top, right, bottom, left */
     padding: 75px 50px 75px 50px;
 
-    /* text color */
-    color: #1F2937;
+    background-color: var(--sec3-bg-color);
 }
 #methods .header {
-    color: #1F2937;
+    color: var(--sec3-header-color);
     text-align: center;
 }
 #methods .grid {
     display: grid;
-    border: 1px solid black;
+    border: 1px solid var(--sec3-grid-color);
     border-radius: 3px;
     /* if you want to have different sized columns, then use the commented att */
     /* grid-template-columns: 10fr 10fr 10fr 10fr 10fr 10fr 10fr; */
@@ -101,14 +102,13 @@
 #methods .cell {
     padding: 6px;
     display: grid;
-    border: 1px solid black;
-    font-size: 20px;
+    border: 1px solid var(--sec3-text-color);
 }
 #methods .descript {
-    background-color: #d8dce1;
+    background-color: var(--sec3-descript-col-color);
 }
 #methods .detail {
-    background-color: #e9edf4;
+    background-color: var(--sec3-detail-col-color);
 }
 
 
@@ -119,13 +119,14 @@
     gap: 30px;
     /* top, right, bottom, left */
     padding: 75px 150px 75px 150px;
+    background-color: var(--sec4-bg-color);
 }
 #call-to-action .header {
-    color: #1F2937;
+    color: var(--sec4-header-color);
     text-align: center;
 }
 #call-to-action .subtext {
-    color: #1F2937;
+    color: var(--sec4-subtext-color);
     text-align: center;
 }
 #call-to-action .buttons {
@@ -133,13 +134,13 @@
     justify-content: space-around;
 }
 #call-to-action .buttons button {
-    color: #F9FAF8;
-    background-color: #a6a9ad;
+    color: var(--sec4-btn-text-color);
+    background-color: var(--sec4-btn-color);
     /* round corners */
     border-radius: 10px;
     /* top, right, bottom, left */
     padding: 8px 40px 8px 40px;
-    border: 2px solid #F9FAF8;
+    border: 2px solid var(--sec4-btn-color);
     font-size: 18px;
     font-weight: 500;
 }

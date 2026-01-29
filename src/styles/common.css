@@ -1,17 +1,3 @@
-:root {
-    /* theme colors by color name */
-    --dark-blue: #003060;
-    --tan: #f9e672;
-
-
-    /* theme colors by color function */
-    --header-color: white;
-    --header-txt-color: var(--dark-blue);
-
-    --footer-color: var(--dark-blue);
-    --footer-txt-color: white;
-}
-
 * {
     /* This is here purely for development, comment it out for release */
 	/* outline: 1px solid red; */
@@ -25,10 +11,18 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    font-size: 20px;
 }
 
 button, a {
     cursor: pointer;
+}
+button:hover {
+    /* filter: brightness(1.2); */
+    filter: saturate(1.5);
+}
+a:hover {
+    filter: saturate(1.5);
 }
 
 .title {

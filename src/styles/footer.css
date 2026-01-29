@@ -1,8 +1,10 @@
 #footer {
     background-color: var(--footer-color);
-    color: var(--footer-txt-color);
+    color: var(--footer-text-color);
 
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    font-size: 18px;
 }

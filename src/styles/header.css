@@ -1,6 +1,6 @@
 #header {
     background-color: var(--header-color);
-    color: var(--header-txt-color);
+    color: var(--header-text-color);
     font-family: 'Figtree', sans-serif;
 
     display: flex;
