@@ -19,8 +19,19 @@ async function loadHeaderFooter() {
     try {
         // Fetch the external HTML files
         // Note: the path here should be the expected path in the built dist, not the path in src, you can see/configure this path in webpack.common.js in the const header_footer (filename)
-        const headerFile = await fetch("src/header_footer/header.html");
-        const footerFile = await fetch("src/header_footer/footer.html");
+        let headerFile = await fetch("header_footer/header.html");
+        let footerFile = await fetch("header_footer/footer.html");
+
+        // if failed, try another possible path
+        if (!response.ok) {
+            headerFile = await fetch("../header_footer/header.html");
+            footerFile = await fetch("../header_footer/footer.html");
+
+            // if still failed, IDK what the problem is
+            if(!response.ok) {
+                throw new Error(`Failed to load ${filePath}: ${response.statusText}`);
+            }
+        }
         
         // Extract HTML text from the responses
         const headerHTML = await headerFile.text();
