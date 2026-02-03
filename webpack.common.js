@@ -8,7 +8,7 @@ const generateHtmlPlugin = (title) => {
         // not sure what the function of this is
         title: `${title}`,
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: `${title.toLowerCase()}`,
+        filename: `${title.toLowerCase()}/index.html`,
         // the html path in this project to link to the filename
         template: `./src/pages/${title.toLowerCase()}/index.html`,
     });
@@ -27,13 +27,13 @@ const populateHtmlPlugins = (pagesArray) => {
     })
     return res;
 }
-const pages = populateHtmlPlugins(["Process", "About","Resources", "Contact"]);
+const pages = populateHtmlPlugins(["About", "Process", "Resources", "Contact"]);
 const header_footer = [
     new HtmlWebpackPlugin({
         // not sure what the function of this is
         title: "Header",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "src/header_footer/header.html",
+        filename: "header_footer/header.html",
         // the html path in this project to link to the filename
         template: "./src/header_footer/header.html",
     }),
@@ -41,7 +41,7 @@ const header_footer = [
         // not sure what the function of this is
         title: "Footer",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "src/header_footer/footer.html",
+        filename: "header_footer/footer.html",
         // the html path in this project to link to the filename
         template: "./src/header_footer/footer.html",
     }),
