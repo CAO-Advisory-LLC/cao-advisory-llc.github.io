@@ -33,7 +33,7 @@ const header_footer = [
         // not sure what the function of this is
         title: "Header",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "header_footer/header.html",
+        filename: "src/header_footer/header.html",
         // the html path in this project to link to the filename
         template: "./src/header_footer/header.html",
     }),
@@ -41,7 +41,7 @@ const header_footer = [
         // not sure what the function of this is
         title: "Footer",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "header_footer/footer.html",
+        filename: "src/header_footer/footer.html",
         // the html path in this project to link to the filename
         template: "./src/header_footer/footer.html",
     }),
