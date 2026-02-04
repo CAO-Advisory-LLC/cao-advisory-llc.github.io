@@ -42,6 +42,9 @@ jobs:
 
     - name: Build the application
       run: npm run build
+
+    - name: Manually add CNAME to dist
+      run: npm run add-cname
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
