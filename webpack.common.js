@@ -18,6 +18,7 @@ const populateHtmlPlugins = (pagesArray) => {
 
     const home = new HtmlWebpackPlugin({
         title: "Home",
+        filename: `index.html`,
         template: "./src/pages/home/index.html",
     });
     res.push(home);
