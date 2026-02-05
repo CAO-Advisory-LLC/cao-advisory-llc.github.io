@@ -1,3 +1,8 @@
+#content > section {
+    /* horizontal-offset, vertical-offset, blur, spread, color */
+    box-shadow: 0 1px 10px -6px gray;
+}
+
 #business-msg {
     background-color: var(--sec1-bg-color);
     /* just to center the contents */
@@ -11,11 +16,6 @@
 }
 #business-msg .title {
     color: var(--sec1-title-color);
-    text-align: center;
-}
-#business-msg .subtext {
-    color: var(--sec1-subtext-color);
-    line-height: 1.4;
     text-align: center;
 }
 #business-msg button {
@@ -73,11 +73,26 @@
     width: 60%;
     margin: 20px;
 }
-#success-stories .subtext {
-    color: var(--sec2-subtext-color);
+#success-stories .summary {
+    color: var(--sec2-text-color);
+    font-size: 18px;
     text-align: center;
     /* top, right, bottom, left */
-    margin: 0px 20px 20px 20px;
+    margin: 0px 20px 10px 20px;
+}
+#success-stories button {
+    color: var(--sec1-btn-text-color);
+    background-color: var(--sec1-btn-color);
+
+    border-radius: 10px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    /* top, right, bottom, left */
+    padding: 6px 8px 6px 8px;
+    margin-bottom: 20px;
 }
 
 
@@ -131,8 +146,8 @@
     color: var(--sec4-header-color);
     text-align: center;
 }
-#call-to-action .subtext {
-    color: var(--sec4-subtext-color);
+#call-to-action .invitation {
+    color: var(--sec4-text-color);
     text-align: center;
 }
 #call-to-action .buttons {

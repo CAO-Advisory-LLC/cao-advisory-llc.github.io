@@ -6,6 +6,7 @@ import "./styles/footer.css";
 
 import "./styles/home.css";
 import "./styles/about.css";
+import "./styles/resources.css";
 
 function init() {
     console.log("Hello! The index.js (aka main.js) has been run!");

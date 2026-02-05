@@ -1,0 +1,47 @@
+#stories {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+#stories .title {
+    margin-bottom: 20px;
+}
+#stories .story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#stories .story {
+    /* horizontal offset, vertical offset, blur radius, spread radius, color */
+    /* box-shadow: 0 0 10px -4px gray; */
+
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 20px;
+}
+#stories .parts {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+#stories .parts > * {
+    /* grow, shrink, basis */
+    flex: 1 1 0px;
+}
+#stories .extra {
+    margin-top: 10px;
+}
+
+
+
+#linkedin-articles {
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#list {
+    padding: 75px 100px 75px 100px;
+}

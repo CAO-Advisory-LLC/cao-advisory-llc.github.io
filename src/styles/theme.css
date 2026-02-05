@@ -25,7 +25,7 @@
     /* home page */
     --sec1-bg-color: var(--light-blue-gray);
     --sec1-title-color: black;
-    --sec1-subtext-color: var(--dark-blue-gray);
+    --sec1-text-color: var(--dark-blue-gray);
     --sec1-btn-color: var(--blue);
     --sec1-btn-text-color: white;
 
@@ -34,7 +34,7 @@
     --sec2-story-border-color: black;
     --sec2-story-bg-color: var(--light-blue);
     --sec2-img-border-color: var(--gray);
-    --sec2-subtext-color: var(--gray);
+    --sec2-text-color: var(--gray);
 
     --sec3-bg-color: var(--light-blue-gray);
     --sec3-header-color: black;
@@ -45,7 +45,7 @@
 
     --sec4-bg-color: white;
     --sec4-header-color: black;
-    --sec4-subtext-color: var(--gray);
+    --sec4-text-color: var(--gray);
     --sec4-btn-color: var(--blue);
     --sec4-btn-text-color: white;
 
