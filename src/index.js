@@ -1,12 +1,15 @@
-import "./styles/fonts.css";
-import "./styles/theme.css";
-import "./styles/common.css";
-import "./styles/header.css";
-import "./styles/footer.css";
+import "./global-styles/fonts.css";
+import "./global-styles/theme.css";
+import "./global-styles/common.css";
 
-import "./styles/home.css";
-import "./styles/about.css";
-import "./styles/resources.css";
+import "./header-footer/header.css";
+import "./header-footer/footer.css";
+
+import "./pages/home/style.css";
+import "./pages/about/style.css";
+import "./pages/process/style.css";
+import "./pages/resources/style.css";
+import "./pages/contact/style.css";
 
 function init() {
     console.log("Hello! The index.js (aka main.js) has been run!");
@@ -20,8 +23,8 @@ async function loadHeaderFooter() {
     try {
         // Fetch the external HTML files
         // Note: the path here should be the expected path in the built dist, not the path in src, you can see/configure this path in webpack.common.js in the const header_footer (filename)
-        const headerFile = await fetch("/header_footer/header.html");
-        const footerFile = await fetch("/header_footer/footer.html");
+        const headerFile = await fetch("/header-footer/header.html");
+        const footerFile = await fetch("/header-footer/footer.html");
         
         // Extract HTML text from the responses
         const headerHTML = await headerFile.text();

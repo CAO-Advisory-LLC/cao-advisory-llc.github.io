@@ -10,7 +10,7 @@ const generateHtmlPlugin = (title) => {
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
         filename: `${title.toLowerCase()}/index.html`,
         // the html path in this project to link to the filename
-        template: `./src/pages/${title.toLowerCase()}/index.html`,
+        template: `/src/pages/${title.toLowerCase()}/index.html`,
     });
 }
 const populateHtmlPlugins = (pagesArray) => {
@@ -19,7 +19,7 @@ const populateHtmlPlugins = (pagesArray) => {
     const home = new HtmlWebpackPlugin({
         title: "Home",
         filename: `index.html`,
-        template: "./src/pages/home/index.html",
+        template: "/src/pages/home/index.html",
     });
     res.push(home);
 
@@ -34,17 +34,17 @@ const header_footer = [
         // not sure what the function of this is
         title: "Header",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "header_footer/header.html",
+        filename: "header-footer/header.html",
         // the html path in this project to link to the filename
-        template: "./src/header_footer/header.html",
+        template: "/src/header-footer/header.html",
     }),
     new HtmlWebpackPlugin({
         // not sure what the function of this is
         title: "Footer",
         // the path/URL entered to reach this page: "http://localhost:8080/{filename}"
-        filename: "header_footer/footer.html",
+        filename: "header-footer/footer.html",
         // the html path in this project to link to the filename
-        template: "./src/header_footer/footer.html",
+        template: "/src/header-footer/footer.html",
     }),
 ];
 
@@ -59,7 +59,7 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/pages/home/index.html"],
+        watchFiles: ["/src/pages/home/index.html"],
     },
     plugins: pages.concat(header_footer),
     module: {
