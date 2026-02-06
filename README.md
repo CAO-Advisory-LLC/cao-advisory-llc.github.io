@@ -2,12 +2,14 @@
 Source code for caoadvisoryllc.com
 
 ## TODO
-- find pictures for homepage
-- resources page structure
+- process page
 - contact page basic structure
 
 ## Notes
 - none for now
+
+## Troubleshooting
+- If the Deploy workflow/GitHub action fails with error: `Action failed with "The process '/usr/bin/git' failed with exit code 1"`, wait a minute then rerun all failed workflows. It very occasionally fails for some reason, but then succeeds when rerun.
 
 ## npm (dev) commands
 `npm install` to install all dev dependencies.<br>
