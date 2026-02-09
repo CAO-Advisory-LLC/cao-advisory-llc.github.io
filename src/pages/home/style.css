@@ -18,6 +18,11 @@
     color: var(--sec1-title-color);
     text-align: center;
 }
+#business-msg .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 #business-msg button {
     color: var(--sec1-btn-text-color);
     background-color: var(--sec1-btn-color);
@@ -153,7 +158,8 @@
 }
 #call-to-action .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
 }
 #call-to-action .buttons button {
     color: var(--sec4-btn-text-color);
