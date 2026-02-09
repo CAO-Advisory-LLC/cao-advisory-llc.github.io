@@ -5,14 +5,9 @@ import "./global-styles/common.css";
 import "./header-footer/header.css";
 import "./header-footer/footer.css";
 
-import "./pages/home/style.css";
-import "./pages/about/style.css";
-import "./pages/process/style.css";
-import "./pages/resources/style.css";
-import "./pages/contact/style.css";
 
 function init() {
-    console.log("Hello! The index.js (aka main.js) has been run!");
+    console.log("Hello! The global index.js/main.js has been run!");
 }
 init();
 
