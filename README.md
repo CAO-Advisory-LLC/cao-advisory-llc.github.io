@@ -3,13 +3,15 @@ Source code for caoadvisoryllc.com
 
 ## TODO
 - process page
-- contact page basic structure
 
 ## Notes
 - none for now
 
 ## Troubleshooting
-- If the Deploy workflow/GitHub action fails with error: `Action failed with "The process '/usr/bin/git' failed with exit code 1"`, wait a minute then rerun all failed workflows. It very occasionally fails for some reason, but then succeeds when rerun.
+- If the Deploy workflow/GitHub action fails, rerun all failed workflows. It sometimes fails for some reason, but then succeeds when rerun.
+  - Expected error messages in this case:
+    - `error: failed to push some refs to 'https://github.com/CAO-Advisory-LLC/cao-advisory-llc.github.io.git'
+      hint: Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. If you want to integrate the remote changes, use 'git pull' before pushing again. See the 'Note about fast-forwards' in 'git push --help' for details. Error: Action failed with "The process '/usr/bin/git' failed with exit code 1"`
 
 ## npm (dev) commands
 `npm install` to install all dev dependencies.<br>
