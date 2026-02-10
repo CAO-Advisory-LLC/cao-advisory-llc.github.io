@@ -1,11 +1,20 @@
+#opener {
+    /* top, right, bottom, left */
+    padding: 75px 110px 75px 110px;
+    background-color: var(--bg1);
+}
+#opener .title {
+    margin-bottom: 10px;
+}
+#opener .description {
+
+}
+
+
+
 #stories {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
-}
-#stories .title {
-    margin-bottom: 20px;
-}
-#stories .story-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -17,25 +26,43 @@
     border: 1px solid gray;
     border-radius: 6px;
     padding: 20px;
+
+    /* background-color: var(--bg2); */
+    
+    /* grow, shrink, basis */
+    /* flex: 1 1 0px; */
 }
 #stories .parts {
     margin-top: 20px;
 
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     gap: 10px;
     align-items: center;
 }
 #stories .part {
     /* grow, shrink, basis */
-    flex: 1 1 0px;
-
-    border: 1px solid gray;
+    /* flex: 1 1 0px; */
     border-radius: 6px;
     padding: 10px;
 }
+#stories .challenge, #stories .solution, #stories .results {
+    /* height: 300px; */
+    /* flex: 1 1 0px; */
+}
+#stories .challenge {
+    border: 2px solid var(--challenge);
+}
+#stories .solution {
+    border: 2px solid var(--solution);
+}
+#stories .results {
+    border: 2px solid var(--results);
+}
 #stories .right-arrow {
-    width: 4%;
+    flex: 1 1 0px;
+    width: 40px;
 }
 #stories .extra {
     margin-top: 20px;

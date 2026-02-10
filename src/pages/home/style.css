@@ -4,7 +4,7 @@
 }
 
 #business-msg {
-    background-color: var(--sec1-bg-color);
+    background-color: var(--bg1);
     /* just to center the contents */
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     padding: 75px 200px 75px 200px;
 }
 #business-msg .title {
-    color: var(--sec1-title-color);
+    color: var(--txt0);
     text-align: center;
 }
 #business-msg .buttons {
@@ -49,10 +49,10 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 
-    background-color: var(--sec2-bg-color);
+    background-color: var(--bg0);
 }
 #success-stories .header {
-    color: var(--sec2-header-color);
+    color: var(--txt0);
     text-align: center;
 }
 #success-stories .stories {
@@ -67,7 +67,7 @@
 
     border: 1px solid var(--sec2-story-border-color);
     border-radius: 20px;
-    background-color: var(--sec2-story-bg-color);
+    background-color: var(--bg2);
 
     /* grow, shrink, basis */
     flex: 1 1 0px;
@@ -111,10 +111,10 @@
     /* top, right, bottom, left */
     padding: 75px 50px 75px 50px;
 
-    background-color: var(--sec3-bg-color);
+    background-color: var(--bg1);
 }
 #methods .header {
-    color: var(--sec3-header-color);
+    color: var(--txt0);
     text-align: center;
 }
 #methods .grid {
@@ -129,7 +129,7 @@
 #methods .cell {
     padding: 6px;
     display: grid;
-    border: 1px solid var(--sec3-text-color);
+    border: 1px solid var(--txt0);
 }
 #methods .descript {
     background-color: var(--sec3-descript-col-color);
@@ -146,10 +146,10 @@
     gap: 30px;
     /* top, right, bottom, left */
     padding: 75px 150px 75px 150px;
-    background-color: var(--sec4-bg-color);
+    background-color: var(--bg0);
 }
 #call-to-action .header {
-    color: var(--sec4-header-color);
+    color: var(--txt0);
     text-align: center;
 }
 #call-to-action .invitation {

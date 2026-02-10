@@ -1,0 +1,6 @@
+#opener {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+    background-color: var(--bg1);
+}
+
