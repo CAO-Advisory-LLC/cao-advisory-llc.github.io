@@ -44,12 +44,19 @@
 #stories .part {
     /* grow, shrink, basis */
     /* flex: 1 1 0px; */
-    border-radius: 6px;
-    padding: 10px;
+    /* border-radius: 6px; */
+    /* padding: 10px; */
+}
+#stories .subheader {
+    margin-bottom: 6px;
+    text-align: center;
 }
 #stories .challenge, #stories .solution, #stories .results {
     /* height: 300px; */
     /* flex: 1 1 0px; */
+
+    border-radius: 6px;
+    padding: 10px;
 }
 #stories .challenge {
     border: 2px solid var(--challenge);
@@ -70,12 +77,12 @@
 
 
 
-#linkedin-articles {
+#articles {
     padding: 75px 100px 75px 100px;
 }
 
 
 
-#list {
+#events {
     padding: 75px 100px 75px 100px;
 }

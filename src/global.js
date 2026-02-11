@@ -1,6 +1,6 @@
-import "./global-styles/fonts.css";
-import "./global-styles/theme.css";
-import "./global-styles/common.css";
+import "./global-assets/styles/fonts.css";
+import "./global-assets/styles/theme.css";
+import "./global-assets/styles/common.css";
 
 import "./header-footer/header.css";
 import "./header-footer/footer.css";
