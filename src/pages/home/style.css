@@ -75,11 +75,14 @@
 #success-stories .story .icon {
     border-radius: 10px;
     border: 4px solid var(--sec2-img-border-color);
-    width: 75%;
-    /* width: 200px; */
-    height: 200px;
     margin: 20px;
     padding: 2px;
+
+    width: 75%;
+    /* width/height */
+    aspect-ratio: 4/3;
+    /* resizes img to fill the given width/height while preserving aspect ratio, then crops any excess */
+    object-fit: cover;
 }
 #success-stories .summary {
     color: var(--sec2-text-color);
