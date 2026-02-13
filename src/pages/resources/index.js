@@ -10,7 +10,7 @@ init();
 
 
 function populateArticles() {
-    const containerDiv = document.querySelector("#articles .container");
+    const containerDiv = document.querySelector("#articles .article-list");
 
     // apparently, webpack automatically converts imported JSON strings into JS Objects, so no need for JSON.parse()
     const articlesList = articlesJSON.articles;
@@ -22,11 +22,14 @@ function populateArticles() {
         containerDiv.appendChild(articleDiv);
 
         const title = document.createElement("a");
+        title.classList.add("title");
         title.textContent = articlesList[i].title;
         title.setAttribute("href", `${articlesList[i].link}`);
+        title.setAttribute("target", "_blank");
         articleDiv.appendChild(title);
 
         const date = document.createElement("p");
+        date.classList.add("date");
         date.textContent = articlesList[i].date;
         articleDiv.appendChild(date);
     }

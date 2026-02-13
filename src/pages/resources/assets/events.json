@@ -1,0 +1,132 @@
+{
+    "events": [
+        {
+            "name": "AI in Business: Executive Insights from the Front Lines",
+            "date": "July 2025",
+            "host": "Buckeye Dreamin'",
+            "role": "Keynote Panelist",
+            "details-link": "https://www.buckeyedreamin.com/",
+            "record-link": ""
+        },
+        {
+            "name": "Responsible AI Workgroup",
+            "date": "Dec. 2024, Mar. 2025",
+            "host": "Case Western Reserve University Weatherhead School of Management",
+            "role": "Panelist and Contributor",
+            "details-link": "https://case.edu/weatherhead/xlab/",
+            "record-link": ""
+        },
+        {
+            "name": "Double the Company's Revenue with AI-enabled New Products",
+            "date": "Apr. 21, 2025",
+            "host": "Return on AI (RoAI)",
+            "role": "Podcast Speaker",
+            "details-link": "",
+            "record-link": "https://medium.com/@roaiwithjeffxli/double-firm-revenue-with-predictive-analytics-new-products-299749f81acc"
+        },
+        {
+            "name": "Driving Responsible AI Adoption by Empowerment, Trust, and Collaboration",
+            "date": "Nov. 7, 2024",
+            "host": " CDO Magazine Columbus AI, Data & Security Tech Summit",
+            "role": "Keynote Panelist",
+            "details-link": "https://www.linkedin.com/feed/update/urn:li:activity:7257738132052205568/",
+            "record-link": ""
+        },
+        {
+            "name": "Integrating GenAI into CDAO Roadmap",
+            "date": "June 6, 2024",
+            "host": "International Institute for Analytics (IIA)",
+            "role": "Featured Speaker",
+            "details-link": "https://iianalytics.com/services/analytics-leadership-consortium",
+            "record-link": ""
+        },
+        {
+            "name": "Board Considerations for the use of Artificial Intelligence: Strategy, Tactics, and Governance",
+            "date": "Feb. 13, 2024",
+            "host": "Private Directors Association (PDA) Cleveland Chapter",
+            "role": "Panelist Expert",
+            "details-link": "https://www.linkedin.com/posts/sue-tyler_what-was-the-advice-of-this-amazing-group-activity-7163729111192956928-gmBU",
+            "record-link": ""
+        },
+        {
+            "name": "Offensive data strategies to unlock data value",
+            "date": "Dec. 5, 2023",
+            "host": "The Tech Trek",
+            "role": "Podcast Speaker",
+            "details-link": "",
+            "record-link": "https://creators.spotify.com/pod/profile/thetechtrek/episodes/Data-and-analytics-offensive-strategies-e2crv7p"
+        },
+        {
+            "name": "Leveraging Data to Drive Innovation",
+            "date": "November 14, 2023",
+            "host": "GuidePoint Security (GPSEC) Columbus Tech Summit",
+            "role": "Panelist",
+            "details-link": "https://www.cdomagazine.tech/community/gpsec-columbus-tech-summit-spotlights-midwest-us-growth-as-global-tech-leader",
+            "record-link": ""
+        },
+        {
+            "name": "Positioning Your Data Analytics Team for Success",
+            "date": "Sept. 28, 2023",
+            "host": "Healthcare Strategy",
+            "role": "Podcast Speaker",
+            "details-link": "",
+            "record-link": "https://www.youtube.com/watch?v=eY49z6EFgjk"
+        },
+        {
+            "name": "Best Practices on Developing a Data Strategy for a Positive ROI",
+            "date": "Sept. 12, 2023",
+            "host": "CDO Magazine Data Analytics Summit",
+            "role": "Panelist",
+            "details-link": "https://edmcouncil.org/event/cdo-summit-cincinnati-2023/",
+            "record-link": ""
+        },
+        {
+            "name": "Data & Technology: Unwinding Digital Transformation Journey of Healthcare",
+            "date": "Sept. 16, 2022",
+            "host": "CareAsOne",
+            "role": "Podcast Speaker",
+            "details-link": "",
+            "record-link": "https://youtu.be/Jvowvr7Hpno?si=hanfqgnj8BW2ROyx"
+        },
+        {
+            "name": "How organizations Unlock an Enterprise Data Mindset",
+            "date": "Oct. 26, 2021",
+            "host": "Northwestern Mutual Data Science Institute",
+            "role": "Featured Speaker",
+            "details-link": "https://www.linkedin.com/posts/northwestern-mutual_nmdsi-uwm-marquetteuniversity-activity-6856263061217652736-a0he",
+            "record-link": ""
+        },
+        {
+            "name": "Leveraging Machine Learning and AI to Create Value in Companies",
+            "date": "June 18, 2021",
+            "host": "Ascend Leadership",
+            "role": "Featured Speaker",
+            "details-link": "https://www.facebook.com/100064982192155/posts/10159209167335586/",
+            "record-link": ""
+        },
+        {
+            "name": "Journey in the Analytics Industry, Challenges, and Major Trends",
+            "date": "Dec. 17, 2020",
+            "host": "Excelion Partners",
+            "role": "Podcast Speaker",
+            "details-link": "",
+            "record-link": "https://creators.spotify.com/pod/profile/excelion-partners/episodes/The-4th-Episode---A-Conversation-with-Gary-Cao-enu6er"
+        },
+        {
+            "name": "Chief Data and Analytics Officer Strategy Framework",
+            "date": "Apr. 15 and 22, 2020",
+            "host": "International Institute for Analytics (IIA)",
+            "role": "Featured Speaker",
+            "details-link": "https://iianalytics.com/services/analytics-leadership-consortium",
+            "record-link": ""
+        },
+        {
+            "name": "Transforming Business through Data and Analytics",
+            "date": "2019",
+            "host": "MIT CDOIQ Symposium 2019",
+            "role": "Panelist and Interviewee",
+            "details-link": "",
+            "record-link": "https://www.linkedin.com/posts/steve-wanamaker-391bb2148_gary-cao-vice-president-insight-analytics-activity-6589831713671696384-oBv_"
+        }
+    ]
+}

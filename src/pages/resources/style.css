@@ -80,6 +80,34 @@
 #articles {
     padding: 75px 100px 75px 100px;
 }
+#articles .header {
+    margin-bottom: 20px;
+}
+#articles .article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+#articles .article-list .article {
+    width: 28%;
+    padding: 10px;
+
+    /* horizontal-offset, vertical-offset, blur, spread, color */
+    box-shadow: 0 0 10px -4px gray;
+    border: 1px solid gray;
+}
+#articles .article .title {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+#articles .article .date {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
 
 
 

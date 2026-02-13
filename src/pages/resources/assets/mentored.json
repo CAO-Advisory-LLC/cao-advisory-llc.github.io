@@ -1,0 +1,64 @@
+{
+    "mentored": [
+        {
+            "organization": "China Europe International Business School Global Executive MBA Program",
+            "date": "2024",
+            "course": "GenAI Course Speaker",
+            "link": "https://www.ceibs.edu/gemba"
+        },
+        {
+            "organization": "Case Western Reserve University",
+            "date": "2023-2024",
+            "course": "Data Analytics Strategy Sessions",
+            "link": "https://case.edu/weatherhead/academics/graduate/mba/online-mba-healthcare-management"
+        },
+        {
+            "organization": "Chinese Finance Women Professionals in London (UK)",
+            "date": "2024",
+            "course": "Everything about AI Panel",
+            "link": "https://www.linkedin.com/posts/chinese-women-in-the-city_we-are-very-pleased-to-invite-you-to-our-activity-7225420870826008576-PavV/"
+        },
+        {
+            "organization": "Honda Dev and Manufacturing of America (Marysville, OH)",
+            "date": "2018",
+            "course": "Business Analytics Lunch & Learn",
+            "link": "https://ohio.honda.com/"
+        },
+        {
+            "organization": "Tulane University Master of Business Analytics Program",
+            "date": "2018",
+            "course": "Industry Advisory Council",
+            "link": "https://freeman.tulane.edu/graduate/master-business-analytics/advisory-council"
+        },
+        {
+            "organization": "Nationwide Children's Hospital Research Institute",
+            "date": "2017",
+            "course": "Career Growth Session",
+            "link": "https://www.nationwidechildrens.org/research"
+        },
+        {
+            "organization": "CoverMyMeds (McKesson)",
+            "date": "2017",
+            "course": "Data Analytics Career Growth Session",
+            "link": "https://www.covermymeds.health/"
+        },
+        {
+            "organization": "UCLA",
+            "date": "2017",
+            "course": "Ascend Impact Challenge Hackathon",
+            "link": "https://www.ascendleadership.org/professionals"
+        },
+        {
+            "organization": "The Ohio State University Fisher College",
+            "date": "2015-2016",
+            "course": "Curriculum Design for Data Programs and DataFest",
+            "link": "https://fisher.osu.edu/academic-departments/operations-business-analytics"
+        },
+        {
+            "organization": "Miami University (OH)",
+            "date": "2016",
+            "course": "DataFest Hackathon",
+            "link": "https://miamioh.edu/centers-institutes/center-for-analytics-data-science/events/datafest/index.html"
+        }
+    ]
+}
