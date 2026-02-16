@@ -90,7 +90,7 @@
     gap: 30px;
 }
 #articles .article-list .article {
-    width: 28%;
+    width: 29%;
     padding: 10px;
 
     /* horizontal-offset, vertical-offset, blur, spread, color */
@@ -106,11 +106,86 @@
 #articles .article .date {
     font-size: 14px;
     color: gray;
-    text-decoration: none;
 }
+
 
 
 
 #events {
     padding: 75px 100px 75px 100px;
+}
+#events .header {
+    margin-bottom: 20px;
+}
+#events .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+#events .events-list .event {
+    width: 29%;
+    padding: 10px;
+
+    /* horizontal-offset, vertical-offset, blur, spread, color */
+    box-shadow: 0 0 10px -4px gray;
+    border: 1px solid gray;
+}
+#events .event .name {
+    font-size: 20px;
+    /* text-decoration: none; */
+    display: block;
+    margin-bottom: 10px;
+}
+#events .event .date {
+    font-size: 14px;
+    color: gray;
+}
+#events .event .details {
+    font-size: 14px;
+    /* color: gray; */
+    text-decoration: none;
+}
+#events .event .record {
+    font-size: 14px;
+    /* color: gray; */
+    text-decoration: none;
+}
+
+#events .mentees-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+#events .mentees-list .mentee {
+    width: 29%;
+    padding: 10px;
+
+    /* horizontal-offset, vertical-offset, blur, spread, color */
+    box-shadow: 0 0 10px -4px gray;
+    border: 1px solid gray;
+}
+#events .mentee .course {
+    font-size: 20px;
+    /* text-decoration: none; */
+    display: block;
+    margin-bottom: 10px;
+}
+#events .mentee .organization {
+    font-size: 16px;
+    margin-bottom: 8px;
+    /* color: gray; */
+    /* text-decoration: none; */
+}
+#events .mentee .date {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+#events .mentee .link {
+    font-size: 14px;
+    /* color: gray; */
+    text-decoration: none;
 }
