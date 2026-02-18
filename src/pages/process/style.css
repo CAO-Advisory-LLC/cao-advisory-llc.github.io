@@ -4,3 +4,35 @@
     background-color: var(--bg1);
 }
 
+
+
+#process {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+#process .diagram {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    /* align-items: start; */
+    /* justify-items: center; */
+    /* max-width: 7in; */
+}
+#process .b1 {
+
+}
+#process .b2 {
+    
+}
+#process .b3 {
+    
+}
+#process .b4 {
+    
+}
+#process .b5 {
+    
+}
+#process .b6 {
+    
+}
