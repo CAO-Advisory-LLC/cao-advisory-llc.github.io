@@ -82,7 +82,7 @@ function populateEvents() {
 }
 
 function populateMentees() {
-    const containerDiv = document.querySelector("#events .mentees-list");
+    const containerDiv = document.querySelector("#mentees .mentees-list");
 
     const menteesList = menteesJSON.mentees;
     // console.log(menteesList);

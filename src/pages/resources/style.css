@@ -1,3 +1,7 @@
+* {
+    /* border: 1px solid red; */
+}
+
 #opener {
     /* top, right, bottom, left */
     padding: 75px 110px 75px 110px;
@@ -14,7 +18,7 @@
 
 #stories {
     /* top, right, bottom, left */
-    padding: 75px 100px 75px 100px;
+    padding: 50px 100px 50px 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -78,7 +82,8 @@
 
 
 #articles {
-    padding: 75px 100px 75px 100px;
+    /* top, right, bottom, left */
+    padding: 50px 100px 50px 100px;
 }
 #articles .header {
     margin-bottom: 20px;
@@ -112,7 +117,8 @@
 
 
 #events {
-    padding: 75px 100px 75px 100px;
+    /* top, right, bottom, left */
+    padding: 50px 100px 50px 100px;
 }
 #events .header {
     margin-bottom: 20px;
@@ -122,7 +128,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
-    margin-bottom: 50px;
 }
 #events .events-list .event {
     width: 29%;
@@ -153,13 +158,22 @@
     text-decoration: none;
 }
 
-#events .mentees-list {
+
+
+#mentees {
+    /* top, right, bottom, left */
+    padding: 50px 100px 50px 100px;
+}
+#mentees .header {
+    margin-bottom: 20px;
+}
+#mentees .mentees-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
 }
-#events .mentees-list .mentee {
+#mentees .mentees-list .mentee {
     width: 29%;
     padding: 10px;
 
@@ -167,24 +181,24 @@
     box-shadow: 0 0 10px -4px gray;
     border: 1px solid gray;
 }
-#events .mentee .course {
+#mentees .mentee .course {
     font-size: 20px;
     /* text-decoration: none; */
     display: block;
     margin-bottom: 10px;
 }
-#events .mentee .organization {
+#mentees .mentee .organization {
     font-size: 16px;
     margin-bottom: 8px;
     /* color: gray; */
     /* text-decoration: none; */
 }
-#events .mentee .date {
+#mentees .mentee .date {
     font-size: 14px;
     color: gray;
     text-decoration: none;
 }
-#events .mentee .link {
+#mentees .mentee .link {
     font-size: 14px;
     /* color: gray; */
     text-decoration: none;
