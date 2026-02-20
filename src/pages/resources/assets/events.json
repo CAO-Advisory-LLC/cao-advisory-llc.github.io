@@ -1,19 +1,19 @@
 {
     "events": [
         {
+            "name": "Responsible AI Workgroup",
+            "date": "Feb. 2026",
+            "host": "Case Western Reserve University Weatherhead School of Management",
+            "role": "Panelist and Contributor",
+            "details_link": "https://case.edu/weatherhead/xlab/",
+            "record_link": ""
+        },
+        {
             "name": "AI in Business: Executive Insights from the Front Lines",
             "date": "July 2025",
             "host": "Buckeye Dreamin'",
             "role": "Keynote Panelist",
             "details_link": "https://www.buckeyedreamin.com/",
-            "record_link": ""
-        },
-        {
-            "name": "Responsible AI Workgroup",
-            "date": "Dec. 2024, Mar. 2025",
-            "host": "Case Western Reserve University Weatherhead School of Management",
-            "role": "Panelist and Contributor",
-            "details_link": "https://case.edu/weatherhead/xlab/",
             "record_link": ""
         },
         {

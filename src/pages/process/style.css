@@ -76,3 +76,10 @@
 .c11 {
     grid-column: 11;
 }
+
+
+
+#key-components {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
