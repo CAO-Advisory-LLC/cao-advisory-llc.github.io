@@ -108,50 +108,13 @@
 
 
 
-#methods {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    /* top, right, bottom, left */
-    padding: 75px 50px 75px 50px;
-
-    background-color: var(--bg1);
-}
-#methods .header {
-    color: var(--txt0);
-    text-align: center;
-}
-#methods .grid {
-    display: grid;
-    border: 1px solid var(--sec3-grid-color);
-    border-radius: 3px;
-    /* if you want to have different sized columns, then use the commented att */
-    /* grid-template-columns: 10fr 10fr 10fr 10fr 10fr 10fr 10fr; */
-    grid-template-columns: 2fr repeat(6, 10fr);
-    grid-template-rows: repeat(7, 1fr);
-}
-#methods .cell {
-    padding: 6px;
-    display: grid;
-    border: 1px solid var(--txt0);
-}
-#methods .descript {
-    background-color: var(--sec3-descript-col-color);
-}
-#methods .detail {
-    background-color: var(--sec3-detail-col-color);
-}
-
-
-
 #call-to-action {
     display: flex;
     flex-direction: column;
     gap: 30px;
     /* top, right, bottom, left */
     padding: 75px 150px 75px 150px;
-    background-color: var(--bg0);
+    background-color: var(--bg1);
 }
 #call-to-action .header {
     color: var(--txt0);

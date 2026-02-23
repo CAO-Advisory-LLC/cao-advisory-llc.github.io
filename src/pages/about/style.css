@@ -25,6 +25,9 @@
 
     display: flex;
 }
-#team .person * {
+#team .person > * {
     padding: 10px;
+}
+#team .person .details a {
+    text-decoration: none;
 }
