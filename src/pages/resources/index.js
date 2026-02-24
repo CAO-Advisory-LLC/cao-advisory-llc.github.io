@@ -8,6 +8,30 @@ function init() {
     populateArticles();
     populateEvents();
     populateMentees();
+
+
+    // setting up tab functionality
+    const storiesTab = document.querySelector("#tab-bar .stories");
+    const articlesTab = document.querySelector("#tab-bar .articles");
+    const eventsTab = document.querySelector("#tab-bar .events");
+    const menteesTab = document.querySelector("#tab-bar .mentees");
+
+    storiesTab.addEventListener("click", (e) => openSection(e, "stories"));
+    articlesTab.addEventListener("click", (e) => openSection(e, "articles"));
+    eventsTab.addEventListener("click", (e) => openSection(e, "events"));
+    menteesTab.addEventListener("click", (e) => openSection(e, "mentees"));
+
+
+    // default initial state: only showing stories section
+    const storiesSect = document.querySelector("#stories");
+    const articlesSect = document.querySelector("#articles");
+    const eventsSect = document.querySelector("#events");
+    const menteesSect = document.querySelector("#mentees");
+
+    storiesTab.className += " active";
+    articlesSect.style.display = "none";
+    eventsSect.style.display = "none";
+    menteesSect.style.display = "none";
 }
 init();
 
@@ -114,4 +138,22 @@ function populateMentees() {
         link.setAttribute("target", "_blank");
         articleDiv.appendChild(link);
     }
+}
+
+function openSection(e, section) {
+    // Get all elements with class="can-hide" and hide them
+    const hidableSects = document.getElementsByClassName("hideable");
+    for (let i = 0; i < hidableSects.length; i++) {
+        hidableSects[i].style.display = "none";
+    }
+
+    // Get all elements with class="tab-link" and remove the class "active"
+    const tabLinks = document.getElementsByClassName("tab-link");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(section).style.display = "block";
+    e.currentTarget.className += " active";
 }

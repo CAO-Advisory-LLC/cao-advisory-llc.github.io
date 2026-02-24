@@ -16,9 +16,43 @@
 
 
 
+#tab-bar {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+#tab-bar .tab-link {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+    font-size: 20px;
+    font-weight: 200;
+}
+#tab-bar .tab-link:first-child {
+    margin-left: 100px;
+}
+#tab-bar .tab-link:hover {
+    background-color: #ddd;
+}
+#tab-bar .tab-link.active {
+    background-color: #ccc;
+}
+
+
+
 #stories {
     /* top, right, bottom, left */
     padding: 50px 100px 50px 100px;
+}
+#stories .header {
+    margin-bottom: 20px;
+}
+#stories .story-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -31,10 +65,10 @@
     border-radius: 6px;
     padding: 20px;
 
-    /* background-color: var(--bg2); */
-    
-    /* grow, shrink, basis */
-    /* flex: 1 1 0px; */
+    /* margin-bottom: 20px; */
+}
+#stories .story .header {
+    font-size: 30px;
 }
 #stories .parts {
     margin-top: 20px;
