@@ -122,6 +122,30 @@
 #articles .header {
     margin-bottom: 20px;
 }
+#articles .sub-tab-bar {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+}
+#articles .sub-tab-bar .tab-link {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+    font-size: 20px;
+    font-weight: 200;
+}
+#articles .sub-tab-bar .tab-link:hover {
+    background-color: #ddd;
+}
+#articles .sub-tab-bar .tab-link.active {
+    background-color: #ccc;
+}
 #articles .article-list {
     display: flex;
     flex-wrap: wrap;

@@ -23,15 +23,27 @@ function init() {
 
 
     // default initial state: only showing stories section
-    const storiesSect = document.querySelector("#stories");
+    // const storiesSect = document.querySelector("#stories");
     const articlesSect = document.querySelector("#articles");
     const eventsSect = document.querySelector("#events");
     const menteesSect = document.querySelector("#mentees");
 
-    storiesTab.className += " active";
+    storiesTab.classList.add("active");
     articlesSect.style.display = "none";
     eventsSect.style.display = "none";
     menteesSect.style.display = "none";
+
+
+    // setting up sub-tab (articles) functionality
+    const allTab = document.querySelector("#articles .sub-tab-bar .all");
+    const boardTab = document.querySelector("#articles .sub-tab-bar .board");
+    const cdaoTab = document.querySelector("#articles .sub-tab-bar .cdao");
+
+    allTab.addEventListener("click", (e) => openArticleTab(e, "all"));
+    boardTab.addEventListener("click", (e) => openArticleTab(e, "board"));
+    cdaoTab.addEventListener("click", (e) => openArticleTab(e, "cdao"));
+
+    allTab.classList.add("active");
 }
 init();
 
@@ -47,6 +59,8 @@ function populateArticles() {
     for(let i in articlesList) {
         const articleDiv = document.createElement("div");
         articleDiv.classList.add("article");
+        // articleDiv.classList.add("all");
+        articleDiv.classList.add(`${articlesList[i].tag}`);
         containerDiv.appendChild(articleDiv);
 
         const title = document.createElement("a");
@@ -141,19 +155,51 @@ function populateMentees() {
 }
 
 function openSection(e, section) {
-    // Get all elements with class="can-hide" and hide them
+    // Get all elements (all the content sections) with class="hideable" and hide them
     const hidableSects = document.getElementsByClassName("hideable");
     for (let i = 0; i < hidableSects.length; i++) {
         hidableSects[i].style.display = "none";
     }
 
     // Get all elements with class="tab-link" and remove the class "active"
-    const tabLinks = document.getElementsByClassName("tab-link");
+    const tabBarSect = document.querySelector("#tab-bar");
+    const tabLinks = tabBarSect.getElementsByClassName("tab-link");
     for (let i = 0; i < tabLinks.length; i++) {
-        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        tabLinks[i].classList.remove("active");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(section).style.display = "block";
-    e.currentTarget.className += " active";
+    e.currentTarget.classList.add("active");
+}
+
+function openArticleTab(e, tag) {
+    // Go through each article in .article-list
+    // if tag = "all", make all articles visible
+    // otherwise, for each article, make visible if it has tag as a class, otherwise disable
+    const articlesContainerDiv = document.querySelector("#articles .article-list");
+    const articles = articlesContainerDiv.getElementsByClassName("article");
+    for (let i = 0; i < articles.length; i++) {
+        if(tag === "all") {
+            articles[i].style.display = "block";
+        }
+        else {
+            if(articles[i].classList.contains(tag)) {
+                articles[i].style.display = "block";
+            }
+            else {
+                articles[i].style.display = "none";
+            }
+        }
+    }
+
+    // Get all elements with class="tab-link" and remove the class "active"
+    const articlesTabBar = document.querySelector("#articles .sub-tab-bar");
+    const tabLinks = articlesTabBar.getElementsByClassName("tab-link");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+    }
+
+    // mark event target (the tab just clicked) as active
+    e.currentTarget.classList.add("active");
 }
