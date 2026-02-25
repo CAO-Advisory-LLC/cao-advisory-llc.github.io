@@ -160,11 +160,18 @@
     box-shadow: 0 0 10px -4px gray;
     border: 1px solid gray;
 }
+/* effectlively gap, but without needing flex */
+#articles .article > *:not(:last-child) {
+    display: block;
+    margin-bottom: 6px;
+}
 #articles .article .title {
     font-size: 20px;
     text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
+}
+#articles .article .tag {
+    font-size: 14px;
+    color: gray;
 }
 #articles .article .date {
     font-size: 14px;

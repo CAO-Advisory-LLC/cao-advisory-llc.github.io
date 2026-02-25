@@ -70,6 +70,11 @@ function populateArticles() {
         title.setAttribute("target", "_blank");
         articleDiv.appendChild(title);
 
+        const tag = document.createElement("p");
+        tag.classList.add("tag");
+        tag.textContent = `#${articlesList[i].tag}`;
+        articleDiv.appendChild(tag);
+
         const date = document.createElement("p");
         date.classList.add("date");
         date.textContent = articlesList[i].date;
@@ -153,6 +158,8 @@ function populateMentees() {
         articleDiv.appendChild(link);
     }
 }
+
+
 
 function openSection(e, section) {
     // Get all elements (all the content sections) with class="hideable" and hide them
