@@ -6,6 +6,14 @@
 
 
 
+#details {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+    background-color: var(--bg0);
+}
+
+
+
 #methods {
     display: flex;
     flex-direction: column;
@@ -14,7 +22,7 @@
     /* top, right, bottom, left */
     padding: 75px 50px 75px 50px;
 
-    background-color: var(--bg0);
+    background-color: var(--bg1);
 }
 #methods .header {
     color: var(--txt0);
@@ -46,7 +54,7 @@
 #process {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
-    background-color: var(--bg1);
+    background-color: var(--bg0);
 }
 #process .diagram {
     display: grid;
@@ -117,7 +125,49 @@
 
 
 
-#key-components {
+#value-chain-analogy {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#four-methods {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#organization-gap {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#defining-value {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#ROI {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#balance-value-growth {
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+}
+
+
+
+#governance-oversight {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
