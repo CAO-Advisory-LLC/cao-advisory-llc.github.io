@@ -14,6 +14,9 @@
 
     /* horizontal-offset, vertical-offset, blur, spread, color */
     box-shadow: 0 1px 10px -6px gray;
+
+    /* goes over everything */
+    z-index: 100;
 }
 #header .logo {
     display: block;

@@ -10,6 +10,7 @@ on:
 
 
 jobs:
+  if: false  # set to false to disable this workflow, true to enable
   build:
     runs-on: ubuntu-latest
 
