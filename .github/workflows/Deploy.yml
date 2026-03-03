@@ -10,7 +10,8 @@ on:
 
 
 jobs:
-  if: true  # set to false to disable this workflow, true to enable
+  # set to false to disable this workflow, comment out to enable workflow
+  # if: true
   build:
     runs-on: ubuntu-latest
 
