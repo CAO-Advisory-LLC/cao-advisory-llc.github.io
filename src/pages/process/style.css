@@ -3,7 +3,8 @@
 }
 
 :root {
-  --chart-width: 700px;
+  --hex-width: 700px;
+  --vc-width: 1200px;
 }
 
 #opener {
@@ -71,47 +72,150 @@
 #hex-flowchart .flowchart {
     margin: auto;
     /* all hard size adjustments for flowchart should be made here */
-    width: var(--chart-width);
+    width: var(--hex-width);
     aspect-ratio: 1677 / 1500;
     position: relative;
+    /* text horizontal align */
     text-align: center;
 }
 #hex-flowchart .flowchart .hex-img {
     /* display: block just to get rid of bottom margin */
     display: block;
-    width: var(--chart-width);
+    width: var(--hex-width);
     object-fit: cover;
     overflow: hidden;
     user-select: none;
-    /* position: absolute;
-    left: 0;
-    top: 0; */
     position: absolute;
 }
-#hex-flowchart .flowchart .text {
+#hex-flowchart .flowchart .part {
     position: absolute;
     font-size: 110%;
+    /* text vertical align */
     align-content: center;
 }
+/* center */
 #hex-flowchart .flowchart .center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25%;
     height: 20%;
+    font-weight: bold;
+    font-size: 130%;
 }
+/* right */
 #hex-flowchart .flowchart .top-right {
-    top: 9%;
-    right: 0%;
-    width: 18%;
-    height: 11%;
+    transform: translateY(-50%);
+    top: 15%;
+    right: -14%;
+    width: 30%;
+    height: 15%;
+    text-align: left;
+}
+#hex-flowchart .flowchart .mid-right {
+    transform: translateY(-50%);
+    top: 51%;
+    right: -30%;
+    width: 30%;
+    height: 15%;
+    text-align: left;
+}
+#hex-flowchart .flowchart .bot-right {
+    transform: translateY(-50%);
+    bottom: -1%;
+    right: -15%;
+    width: 30%;
+    height: 15%;
+    text-align: left;
+}
+/* left */
+#hex-flowchart .flowchart .top-left {
+    transform: translateY(-50%);
+    top: 15%;
+    left: -14%;
+    width: 30%;
+    height: 15%;
+    text-align: right;
+}
+#hex-flowchart .flowchart .mid-left {
+    transform: translateY(-50%);
+    top: 51%;
+    left: -30%;
+    width: 30%;
+    height: 15%;
+    text-align: right;
+}
+#hex-flowchart .flowchart .bot-left {
+    transform: translateY(-50%);
+    bottom: -1%;
+    left: -14%;
+    width: 30%;
+    height: 15%;
+    text-align: right;
 }
 
 
 
-#value-chain-analogy {
+#vc-analogy {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
+}
+#vc-analogy .header {
+    margin-bottom: 20px;
+}
+/* container */
+#vc-analogy .chain {
+    margin: auto;
+    /* all hard size adjustments for flowchart should be made here */
+    width: var(--vc-width);
+    aspect-ratio: 3 / 1;
+    position: relative;
+    /* text horizontal align */
+    text-align: center;
+}
+#vc-analogy .chain .vc-img {
+    /* display: block just to get rid of bottom margin */
+    display: block;
+    width: var(--vc-width);
+    object-fit: cover;
+    overflow: hidden;
+    user-select: none;
+    position: absolute;
+}
+#vc-analogy .chain .part {
+    position: absolute;
+    font-size: 110%;
+    /* text vertical align */
+    /* align-content: center; */
+}
+/* steps */
+#vc-analogy .chain .p1 {
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    left: 9%;
+    width: 25%;
+    height: 30%;
+}
+#vc-analogy .chain .p2 {
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    left: 36%;
+    width: 25%;
+    height: 30%;
+}
+#vc-analogy .chain .p3 {
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    left: 63%;
+    width: 25%;
+    height: 30%;
+}
+#vc-analogy .chain .p4 {
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    left: 90%;
+    width: 25%;
+    height: 30%;
 }
 
 
