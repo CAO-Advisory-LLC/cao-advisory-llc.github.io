@@ -1,10 +1,13 @@
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 :root {
   --hex-width: 700px;
   --vc-width: 1200px;
+  --graph-width: 1200px;
+
+  --light-gray: rgb(220, 220, 220);
 }
 
 #opener {
@@ -224,12 +227,114 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
+#four-methods .header {
+    margin-bottom: 20px;
+}
+#four-methods .quarters {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+#four-methods .quarter {
+    display: flex;
+    justify-content: space-evenly;
+}
+#four-methods .q1 {
+    border-right: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+#four-methods .q2 {
+    border-left: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+#four-methods .q3 {
+    border-right: 1px solid var(--light-gray);
+    border-top: 1px solid var(--light-gray);
+}
+#four-methods .q4 {
+    border-left: 1px solid var(--light-gray);
+    border-top: 1px solid var(--light-gray);
+}
+#four-methods .quarter .q-img {
+    object-fit: contain;
+    width: 200px;
+}
+#four-methods .quarter .desc {
+    width: 60%;
+    /* text vertical align */
+    align-content: center;
+}
+#four-methods .desc .subheader {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 
 
 #organization-gap {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
+}
+#organization-gap .header {
+    margin-bottom: 20px;
+}
+/* container */
+#organization-gap .graph {
+    margin: auto;
+    /* all hard size adjustments for flowchart should be made here */
+    width: var(--graph-width);
+    aspect-ratio: 3 / 1;
+    position: relative;
+    /* text horizontal align */
+    text-align: center;
+}
+#organization-gap .graph .graph-img {
+    /* display: block just to get rid of bottom margin */
+    display: block;
+    width: var(--graph-width);
+    object-fit: cover;
+    overflow: hidden;
+    user-select: none;
+    position: absolute;
+}
+#organization-gap .graph .part {
+    position: absolute;
+    font-size: 110%;
+    /* text vertical align */
+    align-content: center;
+}
+/* steps */
+#organization-gap .graph .top {
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+    width: 17%;
+    height: 10%;
+    font-weight: bold;
+}
+#organization-gap .graph .center {
+    transform: translate(-50%, -50%);
+    bottom: 15%;
+    left: 50%;
+    width: 20%;
+    height: 20%;
+    font-weight: bold;
+}
+#organization-gap .graph .left {
+    transform: translate(-50%, -50%);
+    bottom: 15%;
+    left: 24%;
+    width: 20%;
+    height: 20%;
+    color: white;
+}
+#organization-gap .graph .right {
+    transform: translate(-50%, -50%);
+    bottom: 15%;
+    left: 76%;
+    width: 20%;
+    height: 20%;
+    color: white;
 }
 
 
@@ -238,12 +343,18 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
+#defining-value .header {
+    margin-bottom: 20px;
+}
 
 
 
 #ROI {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
+}
+#ROI .header {
+    margin-bottom: 20px;
 }
 
 
@@ -252,10 +363,16 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
+#balance-value-growth .header {
+    margin-bottom: 20px;
+}
 
 
 
 #governance-oversight {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
+}
+#governance-oversight .header {
+    margin-bottom: 20px;
 }
