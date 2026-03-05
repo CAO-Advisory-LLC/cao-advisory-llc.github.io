@@ -6,6 +6,7 @@
   --hex-width: 700px;
   --vc-width: 1200px;
   --graph-width: 1200px;
+  --pyramid-width: 1200px;
 
   --light-gray: rgb(220, 220, 220);
 }
@@ -346,6 +347,37 @@
 #defining-value .header {
     margin-bottom: 20px;
 }
+#defining-value .parts {
+    display: flex;
+    justify-content: center;
+}
+#defining-value .part {
+    display: flex;
+    flex-direction: column;
+}
+#defining-value .internal {
+    border-right: 1px solid var(--light-gray);
+    padding-right: 10px;
+}
+#defining-value .external {
+    border-left: 1px solid var(--light-gray);
+    padding-left: 10px;
+}
+#defining-value .subheader {
+    text-align: center;
+    font-weight: bold;
+}
+#defining-value .subcontent {
+    display: flex;
+}
+#defining-value .subcontent .val-img {
+    object-fit: contain;
+    height: 250px;
+}
+#defining-value .subcontent .subtext {
+    padding: 10px;
+    font-size: 20px;
+}
 
 
 
@@ -355,6 +387,68 @@
 }
 #ROI .header {
     margin-bottom: 20px;
+}
+/* container */
+#ROI .pyramid {
+    margin: auto;
+    /* all hard size adjustments for flowchart should be made here */
+    width: var(--pyramid-width);
+    aspect-ratio: 2704 / 1244;
+    position: relative;
+    /* text horizontal align */
+    text-align: center;
+}
+#ROI .pyramid .pyramid-img {
+    /* display: block just to get rid of bottom margin */
+    display: block;
+    width: var(--pyramid-width);
+    object-fit: cover;
+    overflow: hidden;
+    user-select: none;
+    position: absolute;
+}
+#ROI .pyramid .part {
+    position: absolute;
+    font-size: 110%;
+    /* text vertical align */
+    align-content: center;
+}
+/* steps */
+#ROI .pyramid .l1 {
+    transform: translateX(-50%);
+    bottom: 8%;
+    left: 49.5%;
+    width: 45%;
+    height: 10%;
+}
+#ROI .pyramid .l2 {
+    transform: translateX(-50%);
+    bottom: 28.5%;
+    left: 49.5%;
+    width: 32%;
+    height: 10%;
+}
+#ROI .pyramid .l3 {
+    transform: translateX(-50%);
+    top: 41.5%;
+    left: 49.5%;
+    width: 29%;
+    height: 10%;
+}
+#ROI .pyramid .l4 {
+    transform: translateX(-50%);
+    top: 15%;
+    left: 49.5%;
+    width: 19%;
+    height: 20%;
+    font-size: 20px;
+}
+#ROI .pyramid .out {
+    transform: translate(-50%, -50%);
+    top: 25%;
+    right: -7%;
+    width: 22%;
+    height: 25%;
 }
 
 
