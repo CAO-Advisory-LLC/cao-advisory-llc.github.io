@@ -7,9 +7,37 @@
   --vc-width: 1200px;
   --graph-width: 1200px;
   --pyramid-width: 1200px;
+  --scale-width: 1000px;
+  --columns-width: 1000px;
 
   --light-gray: rgb(220, 220, 220);
 }
+
+/* general common styles for all sections */
+.header {
+    margin-bottom: 20px;
+}
+/* common styles for figures (charts/diagrams) that are just text over images */
+.fig-container {
+    margin: auto;
+    position: relative;
+    /* text horizontal align */
+    text-align: center;
+}
+.fig-img {
+    /* display: block just to get rid of bottom margin */
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    user-select: none;
+    position: absolute;
+}
+.fig-container .part {
+    font-size: 22px;
+    position: absolute;
+}
+
+
 
 #opener {
     /* top, right, bottom, left */
@@ -28,10 +56,6 @@
 
 
 #methods {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
     /* top, right, bottom, left */
     padding: 75px 50px 75px 50px;
 
@@ -70,35 +94,22 @@
     background-color: var(--bg0);
 }
 #hex-flowchart .header {
-    margin-bottom: 20px;
 }
 /* container */
-#hex-flowchart .flowchart {
-    margin: auto;
-    /* all hard size adjustments for flowchart should be made here */
+#hex-flowchart .fig-container {
+    margin-left: 150px;
     width: var(--hex-width);
     aspect-ratio: 1677 / 1500;
-    position: relative;
-    /* text horizontal align */
-    text-align: center;
 }
-#hex-flowchart .flowchart .hex-img {
-    /* display: block just to get rid of bottom margin */
-    display: block;
+#hex-flowchart .fig-container .fig-img {
     width: var(--hex-width);
-    object-fit: cover;
-    overflow: hidden;
-    user-select: none;
-    position: absolute;
 }
-#hex-flowchart .flowchart .part {
-    position: absolute;
-    font-size: 110%;
+#hex-flowchart .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
 /* center */
-#hex-flowchart .flowchart .center {
+#hex-flowchart .fig-container .center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -108,7 +119,7 @@
     font-size: 130%;
 }
 /* right */
-#hex-flowchart .flowchart .top-right {
+#hex-flowchart .fig-container .top-right {
     transform: translateY(-50%);
     top: 15%;
     right: -14%;
@@ -116,7 +127,7 @@
     height: 15%;
     text-align: left;
 }
-#hex-flowchart .flowchart .mid-right {
+#hex-flowchart .fig-container .mid-right {
     transform: translateY(-50%);
     top: 51%;
     right: -30%;
@@ -124,7 +135,7 @@
     height: 15%;
     text-align: left;
 }
-#hex-flowchart .flowchart .bot-right {
+#hex-flowchart .fig-container .bot-right {
     transform: translateY(-50%);
     bottom: -1%;
     right: -15%;
@@ -133,7 +144,7 @@
     text-align: left;
 }
 /* left */
-#hex-flowchart .flowchart .top-left {
+#hex-flowchart .fig-container .top-left {
     transform: translateY(-50%);
     top: 15%;
     left: -14%;
@@ -141,7 +152,7 @@
     height: 15%;
     text-align: right;
 }
-#hex-flowchart .flowchart .mid-left {
+#hex-flowchart .fig-container .mid-left {
     transform: translateY(-50%);
     top: 51%;
     left: -30%;
@@ -149,13 +160,24 @@
     height: 15%;
     text-align: right;
 }
-#hex-flowchart .flowchart .bot-left {
+#hex-flowchart .fig-container .bot-left {
     transform: translateY(-50%);
     bottom: -1%;
     left: -14%;
     width: 30%;
     height: 15%;
     text-align: right;
+}
+#hex-flowchart .fig-container .out {
+    transform: translateY(-50%);
+    top: 50%;
+    right: -60%;
+    width: 30%;
+    height: 40%;
+    text-align: left;
+    /* top, right, bottom, left */
+    padding: 50px 20px 50px 20px;
+    border: 2px solid rgb(194, 171, 150);
 }
 
 
@@ -165,56 +187,42 @@
     padding: 75px 100px 75px 100px;
 }
 #vc-analogy .header {
-    margin-bottom: 20px;
 }
 /* container */
-#vc-analogy .chain {
-    margin: auto;
-    /* all hard size adjustments for flowchart should be made here */
+#vc-analogy .fig-container {
     width: var(--vc-width);
     aspect-ratio: 3 / 1;
-    position: relative;
-    /* text horizontal align */
-    text-align: center;
 }
-#vc-analogy .chain .vc-img {
-    /* display: block just to get rid of bottom margin */
-    display: block;
+#vc-analogy .fig-container .fig-img {
     width: var(--vc-width);
-    object-fit: cover;
-    overflow: hidden;
-    user-select: none;
-    position: absolute;
 }
-#vc-analogy .chain .part {
-    position: absolute;
-    font-size: 110%;
+#vc-analogy .fig-container .part {
     /* text vertical align */
     /* align-content: center; */
 }
-/* steps */
-#vc-analogy .chain .p1 {
+/* parts */
+#vc-analogy .fig-container .p1 {
     transform: translate(-50%, -50%);
     bottom: -10%;
     left: 9%;
     width: 25%;
     height: 30%;
 }
-#vc-analogy .chain .p2 {
+#vc-analogy .fig-container .p2 {
     transform: translate(-50%, -50%);
     bottom: -10%;
     left: 36%;
     width: 25%;
     height: 30%;
 }
-#vc-analogy .chain .p3 {
+#vc-analogy .fig-container .p3 {
     transform: translate(-50%, -50%);
     bottom: -10%;
     left: 63%;
     width: 25%;
     height: 30%;
 }
-#vc-analogy .chain .p4 {
+#vc-analogy .fig-container .p4 {
     transform: translate(-50%, -50%);
     bottom: -10%;
     left: 90%;
@@ -229,7 +237,6 @@
     padding: 75px 100px 75px 100px;
 }
 #four-methods .header {
-    margin-bottom: 20px;
 }
 #four-methods .quarters {
     display: grid;
@@ -277,35 +284,22 @@
     padding: 75px 100px 75px 100px;
 }
 #organization-gap .header {
-    margin-bottom: 20px;
 }
 /* container */
-#organization-gap .graph {
-    margin: auto;
-    /* all hard size adjustments for flowchart should be made here */
+#organization-gap .fig-container {
     width: var(--graph-width);
-    aspect-ratio: 3 / 1;
-    position: relative;
-    /* text horizontal align */
-    text-align: center;
+    aspect-ratio: 2720 / 998;
+    margin-bottom: 100px;
 }
-#organization-gap .graph .graph-img {
-    /* display: block just to get rid of bottom margin */
-    display: block;
+#organization-gap .fig-container .fig-img {
     width: var(--graph-width);
-    object-fit: cover;
-    overflow: hidden;
-    user-select: none;
-    position: absolute;
 }
-#organization-gap .graph .part {
-    position: absolute;
-    font-size: 110%;
+#organization-gap .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
-/* steps */
-#organization-gap .graph .top {
+/* parts */
+#organization-gap .fig-container .top {
     transform: translate(-50%, -50%);
     top: 20%;
     left: 50%;
@@ -313,7 +307,7 @@
     height: 10%;
     font-weight: bold;
 }
-#organization-gap .graph .center {
+#organization-gap .fig-container .center {
     transform: translate(-50%, -50%);
     bottom: 15%;
     left: 50%;
@@ -321,7 +315,7 @@
     height: 20%;
     font-weight: bold;
 }
-#organization-gap .graph .left {
+#organization-gap .fig-container .left {
     transform: translate(-50%, -50%);
     bottom: 15%;
     left: 24%;
@@ -329,13 +323,20 @@
     height: 20%;
     color: white;
 }
-#organization-gap .graph .right {
+#organization-gap .fig-container .right {
     transform: translate(-50%, -50%);
     bottom: 15%;
     left: 76%;
     width: 20%;
     height: 20%;
     color: white;
+}
+#organization-gap .fig-container .bot {
+    transform: translate(-50%, -50%);
+    bottom: -30%;
+    left: 50%;
+    width: 70%;
+    height: 20%;
 }
 
 
@@ -345,13 +346,12 @@
     padding: 75px 100px 75px 100px;
 }
 #defining-value .header {
-    margin-bottom: 20px;
 }
-#defining-value .parts {
+#defining-value .sides {
     display: flex;
     justify-content: center;
 }
-#defining-value .part {
+#defining-value .side {
     display: flex;
     flex-direction: column;
 }
@@ -386,56 +386,42 @@
     padding: 75px 100px 75px 100px;
 }
 #ROI .header {
-    margin-bottom: 20px;
 }
 /* container */
-#ROI .pyramid {
-    margin: auto;
-    /* all hard size adjustments for flowchart should be made here */
+#ROI .fig-container {
     width: var(--pyramid-width);
     aspect-ratio: 2704 / 1244;
-    position: relative;
-    /* text horizontal align */
-    text-align: center;
 }
-#ROI .pyramid .pyramid-img {
-    /* display: block just to get rid of bottom margin */
-    display: block;
+#ROI .fig-container .fig-img {
     width: var(--pyramid-width);
-    object-fit: cover;
-    overflow: hidden;
-    user-select: none;
-    position: absolute;
 }
-#ROI .pyramid .part {
-    position: absolute;
-    font-size: 110%;
+#ROI .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
-/* steps */
-#ROI .pyramid .l1 {
+/* parts */
+#ROI .fig-container .l1 {
     transform: translateX(-50%);
     bottom: 8%;
     left: 49.5%;
     width: 45%;
     height: 10%;
 }
-#ROI .pyramid .l2 {
+#ROI .fig-container .l2 {
     transform: translateX(-50%);
     bottom: 28.5%;
     left: 49.5%;
     width: 32%;
     height: 10%;
 }
-#ROI .pyramid .l3 {
+#ROI .fig-container .l3 {
     transform: translateX(-50%);
     top: 41.5%;
     left: 49.5%;
     width: 29%;
     height: 10%;
 }
-#ROI .pyramid .l4 {
+#ROI .fig-container .l4 {
     transform: translateX(-50%);
     top: 15%;
     left: 49.5%;
@@ -443,7 +429,7 @@
     height: 20%;
     font-size: 20px;
 }
-#ROI .pyramid .out {
+#ROI .fig-container .out {
     transform: translate(-50%, -50%);
     top: 25%;
     right: -7%;
@@ -453,20 +439,117 @@
 
 
 
-#balance-value-growth {
+#bal-val-grow {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#balance-value-growth .header {
-    margin-bottom: 20px;
+#bal-val-grow .header {
+}
+/* container */
+#bal-val-grow .fig-container {
+    width: var(--scale-width);
+    aspect-ratio: 2594 / 1186;
+}
+#bal-val-grow .fig-container .fig-img {
+    width: var(--scale-width);
+}
+#bal-val-grow .fig-container .part {
+    /* text vertical align */
+    align-content: center;
+}
+/* parts */
+#bal-val-grow .fig-container .left-top {
+    transform: translateX(-50%);
+    top: 5%;
+    left: 20%;
+    width: 30%;
+    height: 15%;
+    font-size: 26px;
+    font-weight: bold;
+}
+#bal-val-grow .fig-container .left-mid {
+    transform: translateX(-50%);
+    top: 35%;
+    left: 20%;
+    width: 20%;
+    height: 30%;
+}
+#bal-val-grow .fig-container .right-top {
+    transform: translateX(-50%);
+    top: 5%;
+    right: -10%;
+    width: 30%;
+    height: 15%;
+    font-size: 26px;
+    font-weight: bold;
+}
+#bal-val-grow .fig-container .right-mid {
+    transform: translateX(-50%);
+    top: 35%;
+    right: 0%;
+    width: 20%;
+    height: 30%;
+}
+#bal-val-grow .fig-container .bot {
+    transform: translateX(-50%);
+    bottom: 0%;
+    left: 50%;
+    width: 75%;
+    height: 15%;
 }
 
 
 
-#governance-oversight {
+#board-role {
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#governance-oversight .header {
-    margin-bottom: 20px;
+#board-role .header {
+}
+/* container */
+#board-role .fig-container {
+    width: var(--columns-width);
+    aspect-ratio: 2528 / 1214;
+    /* text horizontal alignment */
+    text-align: left;
+}
+#board-role .fig-container .fig-img {
+    width: var(--columns-width);
+}
+#board-role .fig-container .part {
+    /* text vertical align */
+    /* align-content: center; */
+}
+/* parts */
+#board-role .fig-container .left {
+    transform: translateX(-50%);
+    top: 20%;
+    left: 24%;
+    width: 20%;
+    height: 50%;
+}
+#board-role .fig-container .mid {
+    transform: translateX(-50%);
+    top: 20%;
+    right: 23%;
+    width: 20%;
+    height: 50%;
+}
+#board-role .fig-container .right {
+    transform: translateX(-50%);
+    top: 20%;
+    right: -7%;
+    width: 20%;
+    height: 50%;
+}
+#board-role .fig-container .bot {
+    transform: translateX(-50%);
+    bottom: 1%;
+    left: 50%;
+    width: 80%;
+    height: 15%;
+    /* text horizontal alignment */
+    text-align: center;
+    /* text vertical align */
+    align-content: center;
 }
