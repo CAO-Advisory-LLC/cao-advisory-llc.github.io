@@ -41,6 +41,33 @@
 
 
 
+#value-proposition {
+    display: flex;
+    gap: 30px;
+
+    /* top, right, bottom, left */
+    padding: 75px 100px 75px 100px;
+
+    background-color: var(--bg0);
+}
+#value-proposition .text {
+    
+}
+#value-proposition .bold {
+    font-weight: bold;
+}
+#value-proposition .coop-img {
+    /* resizes img to fill the given width/height while preserving aspect ratio, then crops any excess */
+    object-fit: cover;
+
+    width: 50%;
+
+    border: 6px solid var(--bg2);
+    border-radius: 4px;
+}
+
+
+
 #success-stories {
     display: flex;
     flex-direction: column;
@@ -49,7 +76,7 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 
-    background-color: var(--bg0);
+    background-color: var(--bg1);
 }
 #success-stories .header {
     color: var(--txt0);
@@ -114,7 +141,7 @@
     gap: 30px;
     /* top, right, bottom, left */
     padding: 75px 150px 75px 150px;
-    background-color: var(--bg1);
+    background-color: var(--bg0);
 }
 #call-to-action .header {
     color: var(--txt0);
