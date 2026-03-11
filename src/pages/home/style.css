@@ -60,7 +60,7 @@
     /* resizes img to fill the given width/height while preserving aspect ratio, then crops any excess */
     object-fit: cover;
 
-    width: 50%;
+    width: 30%;
 
     border: 6px solid var(--bg2);
     border-radius: 4px;
