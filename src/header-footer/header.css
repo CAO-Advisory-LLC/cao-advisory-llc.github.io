@@ -25,6 +25,8 @@
     margin-top: auto;
     margin-bottom: auto;
     /* padding: 10px; */
+
+    height: 90px;
 }
 #header .links {
     display: flex;
