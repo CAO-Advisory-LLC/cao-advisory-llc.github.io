@@ -10,13 +10,16 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
+
 #team .header {
     margin-bottom: 20px;
 }
+
 #team .people {
     display: flex;
     gap: 10px;
 }
+
 #team .person {
     /* horizontal offset, vertical offset, blur radius, spread radius, color */
     box-shadow: 0 0 10px -4px gray;
@@ -25,9 +28,43 @@
 
     display: flex;
 }
-#team .person > * {
+
+#team .person>* {
     padding: 10px;
 }
+
 #team .person .details a {
     text-decoration: none;
+}
+
+@media (max-width: 900px) {
+
+    #opener,
+    #team {
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #opener,
+    #team {
+        padding: 40px 20px;
+    }
+
+    #team .people {
+        flex-direction: column;
+    }
+
+    #team .person {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #team .person .name\+pic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 }

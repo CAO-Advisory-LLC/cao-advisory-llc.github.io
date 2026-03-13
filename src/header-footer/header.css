@@ -7,7 +7,7 @@
     justify-content: space-between;
     /* top, right, bottom, left */
     padding: 10px 150px 10px 150px;
-    
+
     /* make header stick to the top of the page */
     position: sticky;
     top: 0;
@@ -18,16 +18,48 @@
     /* goes over everything */
     z-index: 100;
 }
+
+@media (max-width: 1200px) {
+    #header {
+        padding: 10px 50px 10px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        position: static;
+        /* sticky might be annoying on very small screens if header is tall */
+    }
+
+    #header .logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    #header .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #header .links a {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
 #header .logo {
     display: block;
 
     /* note: setting margin to auto vertically centers it */
     margin-top: auto;
     margin-bottom: auto;
-    /* padding: 10px; */
-
     height: 90px;
 }
+
 #header .links {
     display: flex;
     justify-content: space-between;
@@ -36,12 +68,13 @@
     /* removes bullet point */
     list-style: none;
 }
+
 #header .links a {
     font-size: 18px;
 
     /* remove link underlines */
     text-decoration: none;
-    
+
     /* purely to center the link text */
     display: flex;
     justify-content: center;

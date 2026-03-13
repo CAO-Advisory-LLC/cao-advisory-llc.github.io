@@ -3,8 +3,14 @@
     color: var(--footer-text-color);
 
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 20px;
 
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        font-size: 14px;
+        padding: 20px 15px;
+    }
 }

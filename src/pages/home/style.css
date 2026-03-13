@@ -167,3 +167,68 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+@media (max-width: 1200px) {
+    #business-msg { padding: 75px 100px; }
+    #call-to-action { padding: 75px 100px; }
+}
+
+@media (max-width: 900px) {
+    #business-msg { padding: 50px 50px; }
+    #value-proposition { padding: 50px 50px; }
+    #success-stories { padding: 50px 50px; }
+    #call-to-action { padding: 50px 50px; }
+}
+
+@media (max-width: 768px) {
+    #business-msg {
+        padding: 40px 20px;
+        gap: 15px;
+    }
+    #business-msg .buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+    #business-msg button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #value-proposition {
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: center;
+    }
+    #value-proposition .coop-img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #success-stories {
+        padding: 40px 20px;
+    }
+    #success-stories .stories {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #success-stories .story {
+        flex: none;
+        width: 100%;
+    }
+
+    #call-to-action {
+        padding: 40px 20px;
+    }
+    #call-to-action .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #call-to-action .buttons button {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px 20px;
+    }
+}

@@ -13,6 +13,85 @@
   --light-gray: rgb(220, 220, 220);
 }
 
+@media (max-width: 1200px) {
+    :root {
+        --hex-width: 600px;
+        --vc-width: 90vw;
+        --graph-width: 90vw;
+        --pyramid-width: 90vw;
+        --scale-width: 90vw;
+        --columns-width: 90vw;
+    }
+}
+
+@media (max-width: 900px) {
+    #opener, #details, #methods, #hex-flowchart, #vc-analogy, #four-methods, #organization-gap, #defining-value, #ROI, #bal-val-grow, #board-role {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --hex-width: 80vw;
+        --vc-width: 95vw;
+        --graph-width: 95vw;
+        --pyramid-width: 95vw;
+        --scale-width: 95vw;
+        --columns-width: 95vw;
+    }
+
+    #methods .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #methods .cell {
+        border: 1px solid var(--txt0);
+    }
+    #methods .blank2, #methods .blank1, #methods .label {
+        display: none;
+    }
+    
+    #hex-flowchart .fig-container {
+        margin-left: 0;
+        margin: auto;
+    }
+
+    /* For complex diagrams that use absolute positioning, 
+       we'll allow horizontal scroll for simplicity if they don't scale well button-wise */
+    .fig-container {
+        min-width: 600px; /* ensure diagram text doesn't overlap too much */
+    }
+
+    #four-methods .quarters {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #four-methods .quarter {
+        border: 1px solid var(--light-gray);
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    #four-methods .quarter .desc {
+        width: 100%;
+        text-align: center;
+    }
+
+    #defining-value .sides {
+        flex-direction: column;
+    }
+    #defining-value .internal, #defining-value .external {
+        border: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #defining-value .subcontent {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* general common styles for all sections */
 .header {
     margin-bottom: 20px;
@@ -102,6 +181,7 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
     background-color: var(--bg0);
+    overflow-x: auto;
 }
 #hex-flowchart .header {
 }
