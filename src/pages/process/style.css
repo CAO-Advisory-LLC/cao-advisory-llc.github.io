@@ -2,6 +2,10 @@
     /* outline: 1px solid red; */
 }
 
+.bold {
+    font-weight: bold;
+}
+
 :root {
   --hex-width: 700px;
   --vc-width: 1200px;
