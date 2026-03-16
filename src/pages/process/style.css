@@ -7,106 +7,32 @@
 }
 
 :root {
-  --hex-width: 700px;
-  --vc-width: 1200px;
-  --graph-width: 1200px;
-  --pyramid-width: 1200px;
-  --scale-width: 1000px;
-  --columns-width: 1000px;
+    --hex-width: 700px;
+    --vc-width: 1200px;
+    --graph-width: 1200px;
+    --pyramid-width: 1200px;
+    --scale-width: 1000px;
+    --columns-width: 1000px;
 
-  --light-gray: rgb(220, 220, 220);
+    --light-gray: rgb(220, 220, 220);
 }
 
-@media (max-width: 1200px) {
-    :root {
-        --hex-width: 600px;
-        --vc-width: 90vw;
-        --graph-width: 90vw;
-        --pyramid-width: 90vw;
-        --scale-width: 90vw;
-        --columns-width: 90vw;
-    }
-}
 
-@media (max-width: 900px) {
-    #opener, #details, #methods, #hex-flowchart, #vc-analogy, #four-methods, #organization-gap, #defining-value, #ROI, #bal-val-grow, #board-role {
-        padding: 50px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --hex-width: 80vw;
-        --vc-width: 95vw;
-        --graph-width: 95vw;
-        --pyramid-width: 95vw;
-        --scale-width: 95vw;
-        --columns-width: 95vw;
-    }
-
-    #methods .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    #methods .cell {
-        border: 1px solid var(--txt0);
-    }
-    #methods .blank2, #methods .blank1, #methods .label {
-        display: none;
-    }
-    
-    #hex-flowchart .fig-container {
-        margin-left: 0;
-        margin: auto;
-    }
-
-    /* For complex diagrams that use absolute positioning, 
-       we'll allow horizontal scroll for simplicity if they don't scale well button-wise */
-    .fig-container {
-        min-width: 600px; /* ensure diagram text doesn't overlap too much */
-    }
-
-    #four-methods .quarters {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    #four-methods .quarter {
-        border: 1px solid var(--light-gray);
-        margin-bottom: 10px;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    #four-methods .quarter .desc {
-        width: 100%;
-        text-align: center;
-    }
-
-    #defining-value .sides {
-        flex-direction: column;
-    }
-    #defining-value .internal, #defining-value .external {
-        border: none;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-    #defining-value .subcontent {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 /* general common styles for all sections */
 .header {
     margin-bottom: 20px;
 }
+
 /* common styles for figures (charts/diagrams) that are just text over images */
 .fig-container {
     margin: auto;
     position: relative;
     /* text horizontal align */
     text-align: center;
+    container-type: inline-size;
 }
+
 .fig-img {
     /* display: block just to get rid of bottom margin */
     display: block;
@@ -115,8 +41,9 @@
     user-select: none;
     position: absolute;
 }
+
 .fig-container .part {
-    font-size: 22px;
+    font-size: calc(22 * 100cqw / var(--base-width, 1000));
     position: absolute;
 }
 
@@ -138,44 +65,54 @@
 
 
 
-#methods {
+#method-grid {
     /* top, right, bottom, left */
     padding: 75px 50px 75px 50px;
 
     background-color: var(--bg1);
 }
-#methods .header {
+
+#method-grid .header {
     color: var(--txt0);
     text-align: center;
 }
-#methods .grid {
+
+#method-grid .grid {
     display: grid;
-    border: 1px solid var(--sec3-grid-color);
+    /* border: 1px solid var(--sec3-grid-color); */
     border-radius: 2px;
     /* if you want to have different sized columns, then use the commented att */
     /* grid-template-columns: 10fr 10fr 10fr 10fr 10fr 10fr 10fr; */
     grid-template-columns: 2fr repeat(6, 10fr);
     grid-template-rows: repeat(7, 1fr);
+
+    overflow-x: scroll;
 }
-#methods .cell {
+
+#method-grid .cell {
     padding: 6px;
     display: grid;
     border: 1px solid var(--txt0);
 }
-#methods .blank2 {
+
+#method-grid .blank2 {
     grid-column: 1 / 3;
 }
-#methods .blank1 {
+
+#method-grid .blank1 {
     grid-column: 1 / 2;
 }
-#methods .label {
+
+#method-grid .label {
     grid-column: 3 / 8;
     justify-content: center;
 }
-#methods .descript {
+
+#method-grid .descript {
     background-color: var(--sec3-descript-col-color);
 }
-#methods .detail {
+
+#method-grid .detail {
     background-color: var(--sec3-detail-col-color);
 }
 
@@ -187,21 +124,26 @@
     background-color: var(--bg0);
     overflow-x: auto;
 }
-#hex-flowchart .header {
-}
+
+#hex-flowchart .header {}
+
 /* container */
 #hex-flowchart .fig-container {
     margin-left: 150px;
     width: var(--hex-width);
     aspect-ratio: 1677 / 1500;
+    --base-width: 700;
 }
+
 #hex-flowchart .fig-container .fig-img {
     width: var(--hex-width);
 }
+
 #hex-flowchart .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
+
 /* center */
 #hex-flowchart .fig-container .center {
     top: 50%;
@@ -210,8 +152,9 @@
     width: 25%;
     height: 20%;
     font-weight: bold;
-    font-size: 130%;
+    font-size: calc(30 * 100cqw / var(--base-width, 700));
 }
+
 /* right */
 #hex-flowchart .fig-container .top-right {
     transform: translateY(-50%);
@@ -221,6 +164,7 @@
     height: 15%;
     text-align: left;
 }
+
 #hex-flowchart .fig-container .mid-right {
     transform: translateY(-50%);
     top: 51%;
@@ -229,6 +173,7 @@
     height: 15%;
     text-align: left;
 }
+
 #hex-flowchart .fig-container .bot-right {
     transform: translateY(-50%);
     bottom: -1%;
@@ -237,6 +182,7 @@
     height: 15%;
     text-align: left;
 }
+
 /* left */
 #hex-flowchart .fig-container .top-left {
     transform: translateY(-50%);
@@ -246,6 +192,7 @@
     height: 15%;
     text-align: right;
 }
+
 #hex-flowchart .fig-container .mid-left {
     transform: translateY(-50%);
     top: 51%;
@@ -254,6 +201,7 @@
     height: 15%;
     text-align: right;
 }
+
 #hex-flowchart .fig-container .bot-left {
     transform: translateY(-50%);
     bottom: -1%;
@@ -262,6 +210,7 @@
     height: 15%;
     text-align: right;
 }
+
 #hex-flowchart .fig-container .out {
     transform: translateY(-50%);
     top: 50%;
@@ -270,9 +219,9 @@
     height: 40%;
     text-align: left;
     /* top, right, bottom, left */
-    padding: 50px 20px 50px 20px;
+    padding: calc(50 * 100cqw / var(--base-width, 700)) calc(20 * 100cqw / var(--base-width, 700));
     border: 2px solid rgb(194, 171, 150);
-    border-radius: 6px;
+    border-radius: calc(6 * 100cqw / var(--base-width, 700));
 }
 
 
@@ -281,20 +230,25 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#vc-analogy .header {
-}
+
+#vc-analogy .header {}
+
 /* container */
 #vc-analogy .fig-container {
     width: var(--vc-width);
     aspect-ratio: 3 / 1;
+    --base-width: 1200;
 }
+
 #vc-analogy .fig-container .fig-img {
     width: var(--vc-width);
 }
+
 #vc-analogy .fig-container .part {
     /* text vertical align */
     /* align-content: center; */
 }
+
 /* parts */
 #vc-analogy .fig-container .p1 {
     transform: translate(-50%, -50%);
@@ -303,6 +257,7 @@
     width: 25%;
     height: 30%;
 }
+
 #vc-analogy .fig-container .p2 {
     transform: translate(-50%, -50%);
     bottom: -10%;
@@ -310,6 +265,7 @@
     width: 25%;
     height: 30%;
 }
+
 #vc-analogy .fig-container .p3 {
     transform: translate(-50%, -50%);
     bottom: -10%;
@@ -317,6 +273,7 @@
     width: 25%;
     height: 30%;
 }
+
 #vc-analogy .fig-container .p4 {
     transform: translate(-50%, -50%);
     bottom: -10%;
@@ -331,42 +288,51 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#four-methods .header {
-}
+
+#four-methods .header {}
+
 #four-methods .quarters {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
+
 #four-methods .quarter {
     display: flex;
     justify-content: space-evenly;
 }
+
 #four-methods .q1 {
     border-right: 1px solid var(--light-gray);
     border-bottom: 1px solid var(--light-gray);
 }
+
 #four-methods .q2 {
     border-left: 1px solid var(--light-gray);
     border-bottom: 1px solid var(--light-gray);
 }
+
 #four-methods .q3 {
     border-right: 1px solid var(--light-gray);
     border-top: 1px solid var(--light-gray);
 }
+
 #four-methods .q4 {
     border-left: 1px solid var(--light-gray);
     border-top: 1px solid var(--light-gray);
 }
+
 #four-methods .quarter .q-img {
     object-fit: contain;
     width: 200px;
 }
+
 #four-methods .quarter .desc {
     width: 60%;
     /* text vertical align */
     align-content: center;
 }
+
 #four-methods .desc .subheader {
     font-weight: bold;
     margin-bottom: 20px;
@@ -378,21 +344,26 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#organization-gap .header {
-}
+
+#organization-gap .header {}
+
 /* container */
 #organization-gap .fig-container {
     width: var(--graph-width);
     aspect-ratio: 2720 / 998;
     margin-bottom: 100px;
+    --base-width: 1200;
 }
+
 #organization-gap .fig-container .fig-img {
     width: var(--graph-width);
 }
+
 #organization-gap .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
+
 /* parts */
 #organization-gap .fig-container .top {
     transform: translate(-50%, -50%);
@@ -402,6 +373,7 @@
     height: 10%;
     font-weight: bold;
 }
+
 #organization-gap .fig-container .center {
     transform: translate(-50%, -50%);
     bottom: 15%;
@@ -410,6 +382,7 @@
     height: 20%;
     font-weight: bold;
 }
+
 #organization-gap .fig-container .left {
     transform: translate(-50%, -50%);
     bottom: 15%;
@@ -418,6 +391,7 @@
     height: 20%;
     color: white;
 }
+
 #organization-gap .fig-container .right {
     transform: translate(-50%, -50%);
     bottom: 15%;
@@ -426,6 +400,7 @@
     height: 20%;
     color: white;
 }
+
 #organization-gap .fig-container .bot {
     transform: translate(-50%, -50%);
     bottom: -30%;
@@ -440,39 +415,48 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#defining-value .header {
-}
+
+#defining-value .header {}
+
 #defining-value .sides {
     display: flex;
     justify-content: center;
 }
+
 #defining-value .side {
     display: flex;
     flex-direction: column;
 }
+
 #defining-value .internal {
     border-right: 1px solid var(--light-gray);
     padding-right: 10px;
 }
+
 #defining-value .external {
     border-left: 1px solid var(--light-gray);
     padding-left: 10px;
 }
+
 #defining-value .subheader {
     text-align: center;
     font-weight: bold;
 }
+
 #defining-value .subcontent {
     display: flex;
 }
+
 #defining-value .subcontent .val-img {
     object-fit: contain;
     height: 250px;
 }
+
 #defining-value .subcontent .subtext {
     padding: 10px;
     font-size: 20px;
 }
+
 #defining-value .extra {
     margin-top: 20px;
     /* top, right, bottom, left */
@@ -487,20 +471,25 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#ROI .header {
-}
+
+#ROI .header {}
+
 /* container */
 #ROI .fig-container {
     width: var(--pyramid-width);
     aspect-ratio: 2704 / 1244;
+    --base-width: 1200;
 }
+
 #ROI .fig-container .fig-img {
     width: var(--pyramid-width);
 }
+
 #ROI .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
+
 /* parts */
 #ROI .fig-container .l1 {
     transform: translateX(-50%);
@@ -509,6 +498,7 @@
     width: 45%;
     height: 10%;
 }
+
 #ROI .fig-container .l2 {
     transform: translateX(-50%);
     bottom: 28.5%;
@@ -516,6 +506,7 @@
     width: 32%;
     height: 10%;
 }
+
 #ROI .fig-container .l3 {
     transform: translateX(-50%);
     top: 41.5%;
@@ -523,14 +514,16 @@
     width: 29%;
     height: 10%;
 }
+
 #ROI .fig-container .l4 {
     transform: translateX(-50%);
     top: 15%;
     left: 49.5%;
     width: 19%;
     height: 20%;
-    font-size: 20px;
+    font-size: calc(20 * 100cqw / var(--base-width, 1200));
 }
+
 #ROI .fig-container .out {
     transform: translate(-50%, -50%);
     top: 25%;
@@ -545,20 +538,25 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#bal-val-grow .header {
-}
+
+#bal-val-grow .header {}
+
 /* container */
 #bal-val-grow .fig-container {
     width: var(--scale-width);
     aspect-ratio: 2594 / 1186;
+    --base-width: 1000;
 }
+
 #bal-val-grow .fig-container .fig-img {
     width: var(--scale-width);
 }
+
 #bal-val-grow .fig-container .part {
     /* text vertical align */
     align-content: center;
 }
+
 /* parts */
 #bal-val-grow .fig-container .left-top {
     transform: translateX(-50%);
@@ -566,9 +564,10 @@
     left: 20%;
     width: 30%;
     height: 15%;
-    font-size: 26px;
+    font-size: calc(26 * 100cqw / var(--base-width, 1000));
     font-weight: bold;
 }
+
 #bal-val-grow .fig-container .left-mid {
     transform: translateX(-50%);
     top: 35%;
@@ -576,15 +575,17 @@
     width: 20%;
     height: 30%;
 }
+
 #bal-val-grow .fig-container .right-top {
     transform: translateX(-50%);
     top: 5%;
     right: -10%;
     width: 30%;
     height: 15%;
-    font-size: 26px;
+    font-size: calc(26 * 100cqw / var(--base-width, 1000));
     font-weight: bold;
 }
+
 #bal-val-grow .fig-container .right-mid {
     transform: translateX(-50%);
     top: 35%;
@@ -592,6 +593,7 @@
     width: 20%;
     height: 30%;
 }
+
 #bal-val-grow .fig-container .bot {
     transform: translateX(-50%);
     bottom: 0%;
@@ -606,22 +608,27 @@
     /* top, right, bottom, left */
     padding: 75px 100px 75px 100px;
 }
-#board-role .header {
-}
+
+#board-role .header {}
+
 /* container */
 #board-role .fig-container {
     width: var(--columns-width);
     aspect-ratio: 2528 / 1214;
     /* text horizontal alignment */
     text-align: left;
+    --base-width: 1000;
 }
+
 #board-role .fig-container .fig-img {
     width: var(--columns-width);
 }
+
 #board-role .fig-container .part {
     /* text vertical align */
     /* align-content: center; */
 }
+
 /* parts */
 #board-role .fig-container .left {
     transform: translateX(-50%);
@@ -630,6 +637,7 @@
     width: 20%;
     height: 50%;
 }
+
 #board-role .fig-container .mid {
     transform: translateX(-50%);
     top: 20%;
@@ -637,6 +645,7 @@
     width: 20%;
     height: 50%;
 }
+
 #board-role .fig-container .right {
     transform: translateX(-50%);
     top: 20%;
@@ -644,6 +653,7 @@
     width: 20%;
     height: 50%;
 }
+
 #board-role .fig-container .bot {
     transform: translateX(-50%);
     bottom: 1%;
@@ -654,4 +664,99 @@
     text-align: center;
     /* text vertical align */
     align-content: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    :root {
+        --hex-width: 600px;
+        --vc-width: 90vw;
+        --graph-width: 90vw;
+        --pyramid-width: 90vw;
+        --scale-width: 90vw;
+        --columns-width: 90vw;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #opener,
+    #details,
+    #method-grid,
+    #hex-flowchart,
+    #vc-analogy,
+    #four-methods,
+    #organization-gap,
+    #defining-value,
+    #ROI,
+    #bal-val-grow,
+    #board-role {
+        /* top/bottom, left/right */
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --hex-width: 80vw;
+        --vc-width: 95vw;
+        --graph-width: 95vw;
+        --pyramid-width: 95vw;
+        --scale-width: 95vw;
+        --columns-width: 95vw;
+    }
+
+    /* #method-grid .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #method-grid .blank2, #method-grid .blank1, #method-grid .label {
+        display: none;
+    } */
+
+    #hex-flowchart .fig-container {
+        margin-left: 0;
+        margin: auto;
+    }
+
+    /* For complex diagrams that use absolute positioning, 
+       we'll allow horizontal scroll for simplicity if they don't scale well button-wise */
+    .fig-container {
+        /* min-width: 600px; removed to map responsive calc correctly */
+    }
+
+    #four-methods .quarters {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    #four-methods .quarter {
+        border: 1px solid var(--light-gray);
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #four-methods .quarter .desc {
+        width: 100%;
+        text-align: center;
+    }
+
+    #defining-value .sides {
+        flex-direction: column;
+    }
+
+    #defining-value .internal,
+    #defining-value .external {
+        border: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #defining-value .subcontent {
+        flex-direction: column;
+        align-items: center;
+    }
 }
