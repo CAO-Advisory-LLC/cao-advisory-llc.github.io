@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 .bold {
@@ -224,7 +224,7 @@
 /* container */
 #vc-analogy .fig-container {
     width: var(--vc-width);
-    aspect-ratio: 3 / 1;
+    aspect-ratio: 2754 / 838;
     --base-width: var(--vc-bw);
 }
 #vc-analogy .fig-container .fig-img {
@@ -233,6 +233,7 @@
 #vc-analogy .fig-container .part {
     /* text vertical align */
     /* align-content: center; */
+    /* font-size: calc(16 * 100cqw / var(--base-width)); */
 }
 /* parts */
 #vc-analogy .fig-container .p1 {
@@ -320,8 +321,7 @@
 /* container */
 #organization-gap .fig-container {
     width: var(--graph-width);
-    aspect-ratio: 2720 / 998;
-    margin-bottom: 100px;
+    aspect-ratio: 2720 / 1198;
     --base-width: var(--graph-bw);
 }
 #organization-gap .fig-container .fig-img {
@@ -334,7 +334,7 @@
 /* parts */
 #organization-gap .fig-container .top {
     transform: translate(-50%, -50%);
-    top: 20%;
+    top: 23%;
     left: 50%;
     width: 17%;
     height: 10%;
@@ -342,7 +342,7 @@
 }
 #organization-gap .fig-container .center {
     transform: translate(-50%, -50%);
-    bottom: 15%;
+    bottom: 20%;
     left: 50%;
     width: 20%;
     height: 20%;
@@ -350,7 +350,7 @@
 }
 #organization-gap .fig-container .left {
     transform: translate(-50%, -50%);
-    bottom: 15%;
+    bottom: 20%;
     left: 24%;
     width: 20%;
     height: 20%;
@@ -358,18 +358,18 @@
 }
 #organization-gap .fig-container .right {
     transform: translate(-50%, -50%);
-    bottom: 15%;
+    bottom: 20%;
     left: 76%;
     width: 20%;
     height: 20%;
     color: white;
 }
 #organization-gap .fig-container .bot {
-    transform: translate(-50%, -50%);
-    bottom: -30%;
+    transform: translateX(-50%);
+    bottom: 0%;
     left: 50%;
     width: 70%;
-    height: 20%;
+    height: 13%;
 }
 
 
@@ -595,7 +595,7 @@
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     :root {
         --hex-width: 90vw;
         --vc-width: 90vw;
