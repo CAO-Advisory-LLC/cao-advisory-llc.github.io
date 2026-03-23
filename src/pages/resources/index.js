@@ -98,6 +98,11 @@ function populateEvents() {
         name.textContent = eventsList[i].name;
         eventDiv.appendChild(name);
 
+        const host = document.createElement("p");
+        host.classList.add("host");
+        host.textContent = eventsList[i].host;
+        eventDiv.appendChild(host);
+
         const date = document.createElement("p");
         date.classList.add("date");
         date.textContent = eventsList[i].date;

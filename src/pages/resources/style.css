@@ -221,9 +221,16 @@
     margin-bottom: 10px;
 }
 
+#events .event .host {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+}
+
 #events .event .date {
     font-size: 14px;
     color: gray;
+    margin-bottom: 10px;
 }
 
 #events .event .details {
