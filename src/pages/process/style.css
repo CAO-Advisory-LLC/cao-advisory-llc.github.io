@@ -404,7 +404,7 @@
 }
 #defining-value .subcontent .val-img {
     object-fit: contain;
-    height: 250px;
+    width: min(250px, 40%);
 }
 #defining-value .subcontent .subtext {
     padding: 10px;
