@@ -1,6 +1,12 @@
 {
     "mentees": [
         {
+            "organization": "BoardProspects",
+            "date": "2026",
+            "course": "Governing Data in the Age of AI",
+            "link": "https://www.linkedin.com/posts/last-chance-to-join-us-this-afternoon-for-share-7505627070631411712-vZny/"
+        },
+        {
             "organization": "China Europe International Business School Global Executive MBA Program",
             "date": "2024",
             "course": "GenAI Course Speaker",
