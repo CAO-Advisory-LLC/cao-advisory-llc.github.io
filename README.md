@@ -1,11 +1,6 @@
 # Source code for static website
 Source code for caoadvisoryllc.com
 
-## TODO
-- process page
-
-## Notes
-- none for now
 
 ## Troubleshooting
 - If the Deploy workflow/GitHub action fails, rerun all failed workflows. It sometimes fails for some reason, but then succeeds when rerun.
