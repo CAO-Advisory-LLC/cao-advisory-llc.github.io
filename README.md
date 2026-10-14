@@ -1,6 +1,9 @@
 # Source code for static website
 Source code for caoadvisoryllc.com
 
+## Notes:
+- npm installing on the dev side will return audit issues. This is an expected issue with `webpack-dev-server`, and can generally be ignored (since it's only a tool used in dev environment for locally previewing the webapp; it's not relevant for prod environment)
+  - use `npm audit --omit=dev` to check for prod environment issues, aka the issues that really matter
 
 ## Troubleshooting
 - If the Deploy workflow/GitHub action fails, rerun all failed workflows. It sometimes fails for some reason, but then succeeds when rerun.
