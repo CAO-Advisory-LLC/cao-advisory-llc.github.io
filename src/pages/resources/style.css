@@ -237,6 +237,7 @@
     font-size: 14px;
     /* color: gray; */
     text-decoration: none;
+    display: block;
 }
 
 #events .event .record {
